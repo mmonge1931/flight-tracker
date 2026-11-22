@@ -1,0 +1,12 @@
+# Credenciales locales (NUNCA subir a GitHub)
+.env
+.env.local
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# macOS
+.DS_Store

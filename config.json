@@ -1,0 +1,49 @@
+{
+  "trip_name": "CDMX · Día de Muertos 2027",
+  "origin": "SJO",
+  "origin_name": "San José (Juan Santamaría)",
+  "destination": "MEX",
+  "destination_name": "Ciudad de México (Benito Juárez)",
+  "adults": 2,
+  "currency": "CRC",
+  "currency_symbol": "₡",
+  "gl": "cr",
+  "hl": "es",
+  "dashboard_url": "https://mmonge1931.github.io/flight-tracker/",
+  "date_windows": [
+    {
+      "id": "antes-f1",
+      "label": "Opción 1 · Antes de F1",
+      "note": "Mié 27 oct – Jue 4 nov (8 noches). Llegas antes del pico de vuelos de F1 y vives todo Día de Muertos.",
+      "outbound_date": "2027-10-27",
+      "return_date": "2027-11-04",
+      "color": "#f59e0b"
+    },
+    {
+      "id": "clasica-fines",
+      "label": "Opción 2 · Clásica (2 fines)",
+      "note": "Vie 29 oct – Sáb 6 nov (8 noches). Aprovecha dos fines de semana; coincide con el finde de F1.",
+      "outbound_date": "2027-10-29",
+      "return_date": "2027-11-06",
+      "color": "#14b8a6"
+    },
+    {
+      "id": "post-f1",
+      "label": "Opción 3 · Esquivando F1",
+      "note": "Dom 31 oct – Lun 8 nov (8 noches). Esquiva el pico de llegadas de F1; cubre 1 y 2 nov + ofrendas.",
+      "outbound_date": "2027-10-31",
+      "return_date": "2027-11-08",
+      "color": "#fb7185"
+    }
+  ],
+  "alerts": {
+    "weekly_summary_weekday": "monday",
+    "drop_alert_percent": 5,
+    "new_record_low_alert": true,
+    "first_availability_alert": true,
+    "target_price_crc": null
+  },
+  "scan_rules": {
+    "skip_if_return_beyond_days": 340
+  }
+}

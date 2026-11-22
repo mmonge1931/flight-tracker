@@ -1,0 +1,1141 @@
+window.FLIGHT_DATA = {
+  "meta": {
+    "trip_name": "CDMX · Día de Muertos 2027",
+    "origin": "SJO",
+    "origin_name": "San José (Juan Santamaría)",
+    "destination": "MEX",
+    "destination_name": "Ciudad de México (Benito Juárez)",
+    "adults": 2,
+    "currency": "CRC",
+    "currency_symbol": "₡",
+    "is_demo": true,
+    "last_updated_iso": "2026-11-21T20:07:12.288266-06:00",
+    "last_updated_display": "21/11/2026 20:07 (CR)",
+    "total_scans": 21,
+    "last_weekly_summary_date": null
+  },
+  "windows": {
+    "antes-f1": {
+      "id": "antes-f1",
+      "label": "Opción 1 · Antes de F1",
+      "note": "Mié 27 oct – Jue 4 nov (8 noches). Llegas antes del pico de vuelos de F1 y vives todo Día de Muertos.",
+      "outbound_date": "2027-10-27",
+      "return_date": "2027-11-04",
+      "nights": 8,
+      "color": "#f59e0b",
+      "status": "available",
+      "status_message": "4 opciones simuladas.",
+      "latest": {
+        "date": "2026-11-21",
+        "timestamp": "2026-11-21T20:07:12.288266-06:00",
+        "best_overall": {
+          "price": 480000,
+          "price_per_person": 240000,
+          "airlines": [
+            "Copa Airlines"
+          ],
+          "airline_summary": "Copa Airlines",
+          "stops": 1,
+          "total_duration_min": 405,
+          "departure_time": "2027-10-27 07:15",
+          "arrival_time": "2027-10-27 14:00",
+          "layovers": [
+            "Ciudad de Panamá (PTY)"
+          ],
+          "is_best": true
+        },
+        "best_nonstop": {
+          "price": 518000,
+          "price_per_person": 259000,
+          "airlines": [
+            "Volaris Costa Rica"
+          ],
+          "airline_summary": "Volaris Costa Rica",
+          "stops": 0,
+          "total_duration_min": 195,
+          "departure_time": "2027-10-27 08:40",
+          "arrival_time": "2027-10-27 11:55",
+          "layovers": [],
+          "is_best": true
+        },
+        "top_flights": [
+          {
+            "price": 480000,
+            "price_per_person": 240000,
+            "airlines": [
+              "Copa Airlines"
+            ],
+            "airline_summary": "Copa Airlines",
+            "stops": 1,
+            "total_duration_min": 405,
+            "departure_time": "2027-10-27 07:15",
+            "arrival_time": "2027-10-27 14:00",
+            "layovers": [
+              "Ciudad de Panamá (PTY)"
+            ],
+            "is_best": true
+          },
+          {
+            "price": 518000,
+            "price_per_person": 259000,
+            "airlines": [
+              "Volaris Costa Rica"
+            ],
+            "airline_summary": "Volaris Costa Rica",
+            "stops": 0,
+            "total_duration_min": 195,
+            "departure_time": "2027-10-27 08:40",
+            "arrival_time": "2027-10-27 11:55",
+            "layovers": [],
+            "is_best": true
+          },
+          {
+            "price": 546000,
+            "price_per_person": 273000,
+            "airlines": [
+              "Aeroméxico"
+            ],
+            "airline_summary": "Aeroméxico",
+            "stops": 0,
+            "total_duration_min": 200,
+            "departure_time": "2027-10-27 14:10",
+            "arrival_time": "2027-10-27 17:30",
+            "layovers": [],
+            "is_best": true
+          },
+          {
+            "price": 567000,
+            "price_per_person": 283500,
+            "airlines": [
+              "Avianca"
+            ],
+            "airline_summary": "Avianca",
+            "stops": 0,
+            "total_duration_min": 205,
+            "departure_time": "2027-10-27 16:25",
+            "arrival_time": "2027-10-27 19:50",
+            "layovers": [],
+            "is_best": false
+          }
+        ],
+        "price_insights": {
+          "lowest_price": 480000,
+          "price_level": "low",
+          "typical_price_range": [
+            410000,
+            520000
+          ]
+        },
+        "google_flights_url": "https://www.google.com/travel/flights?q=Flights+to+MEX+from+SJO+on+2027-10-27+through+2027-11-04&curr=CRC&hl=es"
+      },
+      "stats": {
+        "samples": 21,
+        "min_overall": 469000,
+        "min_overall_date": "2026-11-10",
+        "max_overall": 493000,
+        "avg_overall": 480762,
+        "min_nonstop": 507000,
+        "min_nonstop_date": "2026-11-10",
+        "previous_overall": 474000,
+        "delta_crc": 6000,
+        "delta_pct": 1.3
+      },
+      "history": [
+        {
+          "date": "2026-11-01",
+          "status": "available",
+          "best_overall_price": 475000,
+          "best_overall_per_person": 237500,
+          "best_overall_airline": "Copa Airlines",
+          "best_overall_stops": 1,
+          "best_nonstop_price": 513000,
+          "best_nonstop_per_person": 256500,
+          "best_nonstop_airline": "Volaris Costa Rica",
+          "price_level": "low"
+        },
+        {
+          "date": "2026-11-02",
+          "status": "available",
+          "best_overall_price": 487000,
+          "best_overall_per_person": 243500,
+          "best_overall_airline": "Copa Airlines",
+          "best_overall_stops": 1,
+          "best_nonstop_price": 525000,
+          "best_nonstop_per_person": 262500,
+          "best_nonstop_airline": "Volaris Costa Rica",
+          "price_level": "low"
+        },
+        {
+          "date": "2026-11-03",
+          "status": "available",
+          "best_overall_price": 485000,
+          "best_overall_per_person": 242500,
+          "best_overall_airline": "Copa Airlines",
+          "best_overall_stops": 1,
+          "best_nonstop_price": 523000,
+          "best_nonstop_per_person": 261500,
+          "best_nonstop_airline": "Aeroméxico",
+          "price_level": "low"
+        },
+        {
+          "date": "2026-11-04",
+          "status": "available",
+          "best_overall_price": 493000,
+          "best_overall_per_person": 246500,
+          "best_overall_airline": "Copa Airlines",
+          "best_overall_stops": 1,
+          "best_nonstop_price": 531000,
+          "best_nonstop_per_person": 265500,
+          "best_nonstop_airline": "Volaris Costa Rica",
+          "price_level": "low"
+        },
+        {
+          "date": "2026-11-05",
+          "status": "available",
+          "best_overall_price": 492000,
+          "best_overall_per_person": 246000,
+          "best_overall_airline": "Copa Airlines",
+          "best_overall_stops": 1,
+          "best_nonstop_price": 530000,
+          "best_nonstop_per_person": 265000,
+          "best_nonstop_airline": "Volaris Costa Rica",
+          "price_level": "low"
+        },
+        {
+          "date": "2026-11-06",
+          "status": "available",
+          "best_overall_price": 483000,
+          "best_overall_per_person": 241500,
+          "best_overall_airline": "Copa Airlines",
+          "best_overall_stops": 1,
+          "best_nonstop_price": 521000,
+          "best_nonstop_per_person": 260500,
+          "best_nonstop_airline": "Aeroméxico",
+          "price_level": "low"
+        },
+        {
+          "date": "2026-11-07",
+          "status": "available",
+          "best_overall_price": 483000,
+          "best_overall_per_person": 241500,
+          "best_overall_airline": "Copa Airlines",
+          "best_overall_stops": 1,
+          "best_nonstop_price": 521000,
+          "best_nonstop_per_person": 260500,
+          "best_nonstop_airline": "Volaris Costa Rica",
+          "price_level": "low"
+        },
+        {
+          "date": "2026-11-08",
+          "status": "available",
+          "best_overall_price": 470000,
+          "best_overall_per_person": 235000,
+          "best_overall_airline": "Copa Airlines",
+          "best_overall_stops": 1,
+          "best_nonstop_price": 508000,
+          "best_nonstop_per_person": 254000,
+          "best_nonstop_airline": "Volaris Costa Rica",
+          "price_level": "low"
+        },
+        {
+          "date": "2026-11-09",
+          "status": "available",
+          "best_overall_price": 477000,
+          "best_overall_per_person": 238500,
+          "best_overall_airline": "Copa Airlines",
+          "best_overall_stops": 1,
+          "best_nonstop_price": 515000,
+          "best_nonstop_per_person": 257500,
+          "best_nonstop_airline": "Aeroméxico",
+          "price_level": "low"
+        },
+        {
+          "date": "2026-11-10",
+          "status": "available",
+          "best_overall_price": 469000,
+          "best_overall_per_person": 234500,
+          "best_overall_airline": "Copa Airlines",
+          "best_overall_stops": 1,
+          "best_nonstop_price": 507000,
+          "best_nonstop_per_person": 253500,
+          "best_nonstop_airline": "Volaris Costa Rica",
+          "price_level": "low"
+        },
+        {
+          "date": "2026-11-11",
+          "status": "available",
+          "best_overall_price": 476000,
+          "best_overall_per_person": 238000,
+          "best_overall_airline": "Copa Airlines",
+          "best_overall_stops": 1,
+          "best_nonstop_price": 514000,
+          "best_nonstop_per_person": 257000,
+          "best_nonstop_airline": "Volaris Costa Rica",
+          "price_level": "low"
+        },
+        {
+          "date": "2026-11-12",
+          "status": "available",
+          "best_overall_price": 481000,
+          "best_overall_per_person": 240500,
+          "best_overall_airline": "Copa Airlines",
+          "best_overall_stops": 1,
+          "best_nonstop_price": 519000,
+          "best_nonstop_per_person": 259500,
+          "best_nonstop_airline": "Aeroméxico",
+          "price_level": "low"
+        },
+        {
+          "date": "2026-11-13",
+          "status": "available",
+          "best_overall_price": 486000,
+          "best_overall_per_person": 243000,
+          "best_overall_airline": "Copa Airlines",
+          "best_overall_stops": 1,
+          "best_nonstop_price": 524000,
+          "best_nonstop_per_person": 262000,
+          "best_nonstop_airline": "Volaris Costa Rica",
+          "price_level": "low"
+        },
+        {
+          "date": "2026-11-14",
+          "status": "available",
+          "best_overall_price": 485000,
+          "best_overall_per_person": 242500,
+          "best_overall_airline": "Copa Airlines",
+          "best_overall_stops": 1,
+          "best_nonstop_price": 523000,
+          "best_nonstop_per_person": 261500,
+          "best_nonstop_airline": "Volaris Costa Rica",
+          "price_level": "low"
+        },
+        {
+          "date": "2026-11-15",
+          "status": "available",
+          "best_overall_price": 485000,
+          "best_overall_per_person": 242500,
+          "best_overall_airline": "Copa Airlines",
+          "best_overall_stops": 1,
+          "best_nonstop_price": 523000,
+          "best_nonstop_per_person": 261500,
+          "best_nonstop_airline": "Aeroméxico",
+          "price_level": "low"
+        },
+        {
+          "date": "2026-11-16",
+          "status": "available",
+          "best_overall_price": 487000,
+          "best_overall_per_person": 243500,
+          "best_overall_airline": "Copa Airlines",
+          "best_overall_stops": 1,
+          "best_nonstop_price": 525000,
+          "best_nonstop_per_person": 262500,
+          "best_nonstop_airline": "Volaris Costa Rica",
+          "price_level": "low"
+        },
+        {
+          "date": "2026-11-17",
+          "status": "available",
+          "best_overall_price": 484000,
+          "best_overall_per_person": 242000,
+          "best_overall_airline": "Copa Airlines",
+          "best_overall_stops": 1,
+          "best_nonstop_price": 522000,
+          "best_nonstop_per_person": 261000,
+          "best_nonstop_airline": "Volaris Costa Rica",
+          "price_level": "low"
+        },
+        {
+          "date": "2026-11-18",
+          "status": "available",
+          "best_overall_price": 472000,
+          "best_overall_per_person": 236000,
+          "best_overall_airline": "Copa Airlines",
+          "best_overall_stops": 1,
+          "best_nonstop_price": 510000,
+          "best_nonstop_per_person": 255000,
+          "best_nonstop_airline": "Aeroméxico",
+          "price_level": "low"
+        },
+        {
+          "date": "2026-11-19",
+          "status": "available",
+          "best_overall_price": 472000,
+          "best_overall_per_person": 236000,
+          "best_overall_airline": "Copa Airlines",
+          "best_overall_stops": 1,
+          "best_nonstop_price": 510000,
+          "best_nonstop_per_person": 255000,
+          "best_nonstop_airline": "Volaris Costa Rica",
+          "price_level": "low"
+        },
+        {
+          "date": "2026-11-20",
+          "status": "available",
+          "best_overall_price": 474000,
+          "best_overall_per_person": 237000,
+          "best_overall_airline": "Copa Airlines",
+          "best_overall_stops": 1,
+          "best_nonstop_price": 512000,
+          "best_nonstop_per_person": 256000,
+          "best_nonstop_airline": "Volaris Costa Rica",
+          "price_level": "low"
+        },
+        {
+          "date": "2026-11-21",
+          "status": "available",
+          "best_overall_price": 480000,
+          "best_overall_per_person": 240000,
+          "best_overall_airline": "Copa Airlines",
+          "best_overall_stops": 1,
+          "best_nonstop_price": 518000,
+          "best_nonstop_per_person": 259000,
+          "best_nonstop_airline": "Aeroméxico",
+          "price_level": "low"
+        }
+      ]
+    },
+    "clasica-fines": {
+      "id": "clasica-fines",
+      "label": "Opción 2 · Clásica (2 fines)",
+      "note": "Vie 29 oct – Sáb 6 nov (8 noches). Aprovecha dos fines de semana; coincide con el finde de F1.",
+      "outbound_date": "2027-10-29",
+      "return_date": "2027-11-06",
+      "nights": 8,
+      "color": "#14b8a6",
+      "status": "available",
+      "status_message": "4 opciones simuladas.",
+      "latest": {
+        "date": "2026-11-21",
+        "timestamp": "2026-11-21T20:07:12.288266-06:00",
+        "best_overall": {
+          "price": 514000,
+          "price_per_person": 257000,
+          "airlines": [
+            "Copa Airlines"
+          ],
+          "airline_summary": "Copa Airlines",
+          "stops": 1,
+          "total_duration_min": 405,
+          "departure_time": "2027-10-29 07:15",
+          "arrival_time": "2027-10-29 14:00",
+          "layovers": [
+            "Ciudad de Panamá (PTY)"
+          ],
+          "is_best": true
+        },
+        "best_nonstop": {
+          "price": 566000,
+          "price_per_person": 283000,
+          "airlines": [
+            "Volaris Costa Rica"
+          ],
+          "airline_summary": "Volaris Costa Rica",
+          "stops": 0,
+          "total_duration_min": 195,
+          "departure_time": "2027-10-29 08:40",
+          "arrival_time": "2027-10-29 11:55",
+          "layovers": [],
+          "is_best": true
+        },
+        "top_flights": [
+          {
+            "price": 514000,
+            "price_per_person": 257000,
+            "airlines": [
+              "Copa Airlines"
+            ],
+            "airline_summary": "Copa Airlines",
+            "stops": 1,
+            "total_duration_min": 405,
+            "departure_time": "2027-10-29 07:15",
+            "arrival_time": "2027-10-29 14:00",
+            "layovers": [
+              "Ciudad de Panamá (PTY)"
+            ],
+            "is_best": true
+          },
+          {
+            "price": 566000,
+            "price_per_person": 283000,
+            "airlines": [
+              "Volaris Costa Rica"
+            ],
+            "airline_summary": "Volaris Costa Rica",
+            "stops": 0,
+            "total_duration_min": 195,
+            "departure_time": "2027-10-29 08:40",
+            "arrival_time": "2027-10-29 11:55",
+            "layovers": [],
+            "is_best": true
+          },
+          {
+            "price": 594000,
+            "price_per_person": 297000,
+            "airlines": [
+              "Aeroméxico"
+            ],
+            "airline_summary": "Aeroméxico",
+            "stops": 0,
+            "total_duration_min": 200,
+            "departure_time": "2027-10-29 14:10",
+            "arrival_time": "2027-10-29 17:30",
+            "layovers": [],
+            "is_best": true
+          },
+          {
+            "price": 615000,
+            "price_per_person": 307500,
+            "airlines": [
+              "Avianca"
+            ],
+            "airline_summary": "Avianca",
+            "stops": 0,
+            "total_duration_min": 205,
+            "departure_time": "2027-10-29 16:25",
+            "arrival_time": "2027-10-29 19:50",
+            "layovers": [],
+            "is_best": false
+          }
+        ],
+        "price_insights": {
+          "lowest_price": 514000,
+          "price_level": "high",
+          "typical_price_range": [
+            460000,
+            610000
+          ]
+        },
+        "google_flights_url": "https://www.google.com/travel/flights?q=Flights+to+MEX+from+SJO+on+2027-10-29+through+2027-11-06&curr=CRC&hl=es"
+      },
+      "stats": {
+        "samples": 21,
+        "min_overall": 512000,
+        "min_overall_date": "2026-11-13",
+        "max_overall": 544000,
+        "avg_overall": 528143,
+        "min_nonstop": 564000,
+        "min_nonstop_date": "2026-11-13",
+        "previous_overall": 515000,
+        "delta_crc": -1000,
+        "delta_pct": -0.2
+      },
+      "history": [
+        {
+          "date": "2026-11-01",
+          "status": "available",
+          "best_overall_price": 532000,
+          "best_overall_per_person": 266000,
+          "best_overall_airline": "Copa Airlines",
+          "best_overall_stops": 1,
+          "best_nonstop_price": 584000,
+          "best_nonstop_per_person": 292000,
+          "best_nonstop_airline": "Volaris Costa Rica",
+          "price_level": "high"
+        },
+        {
+          "date": "2026-11-02",
+          "status": "available",
+          "best_overall_price": 533000,
+          "best_overall_per_person": 266500,
+          "best_overall_airline": "Copa Airlines",
+          "best_overall_stops": 1,
+          "best_nonstop_price": 585000,
+          "best_nonstop_per_person": 292500,
+          "best_nonstop_airline": "Volaris Costa Rica",
+          "price_level": "high"
+        },
+        {
+          "date": "2026-11-03",
+          "status": "available",
+          "best_overall_price": 527000,
+          "best_overall_per_person": 263500,
+          "best_overall_airline": "Copa Airlines",
+          "best_overall_stops": 1,
+          "best_nonstop_price": 579000,
+          "best_nonstop_per_person": 289500,
+          "best_nonstop_airline": "Aeroméxico",
+          "price_level": "high"
+        },
+        {
+          "date": "2026-11-04",
+          "status": "available",
+          "best_overall_price": 538000,
+          "best_overall_per_person": 269000,
+          "best_overall_airline": "Copa Airlines",
+          "best_overall_stops": 1,
+          "best_nonstop_price": 590000,
+          "best_nonstop_per_person": 295000,
+          "best_nonstop_airline": "Volaris Costa Rica",
+          "price_level": "high"
+        },
+        {
+          "date": "2026-11-05",
+          "status": "available",
+          "best_overall_price": 528000,
+          "best_overall_per_person": 264000,
+          "best_overall_airline": "Copa Airlines",
+          "best_overall_stops": 1,
+          "best_nonstop_price": 580000,
+          "best_nonstop_per_person": 290000,
+          "best_nonstop_airline": "Volaris Costa Rica",
+          "price_level": "high"
+        },
+        {
+          "date": "2026-11-06",
+          "status": "available",
+          "best_overall_price": 539000,
+          "best_overall_per_person": 269500,
+          "best_overall_airline": "Copa Airlines",
+          "best_overall_stops": 1,
+          "best_nonstop_price": 591000,
+          "best_nonstop_per_person": 295500,
+          "best_nonstop_airline": "Aeroméxico",
+          "price_level": "high"
+        },
+        {
+          "date": "2026-11-07",
+          "status": "available",
+          "best_overall_price": 535000,
+          "best_overall_per_person": 267500,
+          "best_overall_airline": "Copa Airlines",
+          "best_overall_stops": 1,
+          "best_nonstop_price": 587000,
+          "best_nonstop_per_person": 293500,
+          "best_nonstop_airline": "Volaris Costa Rica",
+          "price_level": "high"
+        },
+        {
+          "date": "2026-11-08",
+          "status": "available",
+          "best_overall_price": 530000,
+          "best_overall_per_person": 265000,
+          "best_overall_airline": "Copa Airlines",
+          "best_overall_stops": 1,
+          "best_nonstop_price": 582000,
+          "best_nonstop_per_person": 291000,
+          "best_nonstop_airline": "Volaris Costa Rica",
+          "price_level": "high"
+        },
+        {
+          "date": "2026-11-09",
+          "status": "available",
+          "best_overall_price": 529000,
+          "best_overall_per_person": 264500,
+          "best_overall_airline": "Copa Airlines",
+          "best_overall_stops": 1,
+          "best_nonstop_price": 581000,
+          "best_nonstop_per_person": 290500,
+          "best_nonstop_airline": "Aeroméxico",
+          "price_level": "high"
+        },
+        {
+          "date": "2026-11-10",
+          "status": "available",
+          "best_overall_price": 536000,
+          "best_overall_per_person": 268000,
+          "best_overall_airline": "Copa Airlines",
+          "best_overall_stops": 1,
+          "best_nonstop_price": 588000,
+          "best_nonstop_per_person": 294000,
+          "best_nonstop_airline": "Volaris Costa Rica",
+          "price_level": "high"
+        },
+        {
+          "date": "2026-11-11",
+          "status": "available",
+          "best_overall_price": 530000,
+          "best_overall_per_person": 265000,
+          "best_overall_airline": "Copa Airlines",
+          "best_overall_stops": 1,
+          "best_nonstop_price": 582000,
+          "best_nonstop_per_person": 291000,
+          "best_nonstop_airline": "Volaris Costa Rica",
+          "price_level": "high"
+        },
+        {
+          "date": "2026-11-12",
+          "status": "available",
+          "best_overall_price": 516000,
+          "best_overall_per_person": 258000,
+          "best_overall_airline": "Copa Airlines",
+          "best_overall_stops": 1,
+          "best_nonstop_price": 568000,
+          "best_nonstop_per_person": 284000,
+          "best_nonstop_airline": "Aeroméxico",
+          "price_level": "high"
+        },
+        {
+          "date": "2026-11-13",
+          "status": "available",
+          "best_overall_price": 512000,
+          "best_overall_per_person": 256000,
+          "best_overall_airline": "Copa Airlines",
+          "best_overall_stops": 1,
+          "best_nonstop_price": 564000,
+          "best_nonstop_per_person": 282000,
+          "best_nonstop_airline": "Volaris Costa Rica",
+          "price_level": "high"
+        },
+        {
+          "date": "2026-11-14",
+          "status": "available",
+          "best_overall_price": 525000,
+          "best_overall_per_person": 262500,
+          "best_overall_airline": "Copa Airlines",
+          "best_overall_stops": 1,
+          "best_nonstop_price": 577000,
+          "best_nonstop_per_person": 288500,
+          "best_nonstop_airline": "Volaris Costa Rica",
+          "price_level": "high"
+        },
+        {
+          "date": "2026-11-15",
+          "status": "available",
+          "best_overall_price": 534000,
+          "best_overall_per_person": 267000,
+          "best_overall_airline": "Copa Airlines",
+          "best_overall_stops": 1,
+          "best_nonstop_price": 586000,
+          "best_nonstop_per_person": 293000,
+          "best_nonstop_airline": "Aeroméxico",
+          "price_level": "high"
+        },
+        {
+          "date": "2026-11-16",
+          "status": "available",
+          "best_overall_price": 544000,
+          "best_overall_per_person": 272000,
+          "best_overall_airline": "Copa Airlines",
+          "best_overall_stops": 1,
+          "best_nonstop_price": 596000,
+          "best_nonstop_per_person": 298000,
+          "best_nonstop_airline": "Volaris Costa Rica",
+          "price_level": "high"
+        },
+        {
+          "date": "2026-11-17",
+          "status": "available",
+          "best_overall_price": 534000,
+          "best_overall_per_person": 267000,
+          "best_overall_airline": "Copa Airlines",
+          "best_overall_stops": 1,
+          "best_nonstop_price": 586000,
+          "best_nonstop_per_person": 293000,
+          "best_nonstop_airline": "Volaris Costa Rica",
+          "price_level": "high"
+        },
+        {
+          "date": "2026-11-18",
+          "status": "available",
+          "best_overall_price": 526000,
+          "best_overall_per_person": 263000,
+          "best_overall_airline": "Copa Airlines",
+          "best_overall_stops": 1,
+          "best_nonstop_price": 578000,
+          "best_nonstop_per_person": 289000,
+          "best_nonstop_airline": "Aeroméxico",
+          "price_level": "high"
+        },
+        {
+          "date": "2026-11-19",
+          "status": "available",
+          "best_overall_price": 514000,
+          "best_overall_per_person": 257000,
+          "best_overall_airline": "Copa Airlines",
+          "best_overall_stops": 1,
+          "best_nonstop_price": 566000,
+          "best_nonstop_per_person": 283000,
+          "best_nonstop_airline": "Volaris Costa Rica",
+          "price_level": "high"
+        },
+        {
+          "date": "2026-11-20",
+          "status": "available",
+          "best_overall_price": 515000,
+          "best_overall_per_person": 257500,
+          "best_overall_airline": "Copa Airlines",
+          "best_overall_stops": 1,
+          "best_nonstop_price": 567000,
+          "best_nonstop_per_person": 283500,
+          "best_nonstop_airline": "Volaris Costa Rica",
+          "price_level": "high"
+        },
+        {
+          "date": "2026-11-21",
+          "status": "available",
+          "best_overall_price": 514000,
+          "best_overall_per_person": 257000,
+          "best_overall_airline": "Copa Airlines",
+          "best_overall_stops": 1,
+          "best_nonstop_price": 566000,
+          "best_nonstop_per_person": 283000,
+          "best_nonstop_airline": "Aeroméxico",
+          "price_level": "high"
+        }
+      ]
+    },
+    "post-f1": {
+      "id": "post-f1",
+      "label": "Opción 3 · Esquivando F1",
+      "note": "Dom 31 oct – Lun 8 nov (8 noches). Esquiva el pico de llegadas de F1; cubre 1 y 2 nov + ofrendas.",
+      "outbound_date": "2027-10-31",
+      "return_date": "2027-11-08",
+      "nights": 8,
+      "color": "#fb7185",
+      "status": "available",
+      "status_message": "3 opciones simuladas.",
+      "latest": {
+        "date": "2026-11-21",
+        "timestamp": "2026-11-21T20:07:12.288266-06:00",
+        "best_overall": {
+          "price": 440000,
+          "price_per_person": 220000,
+          "airlines": [
+            "Volaris Costa Rica"
+          ],
+          "airline_summary": "Volaris Costa Rica",
+          "stops": 0,
+          "total_duration_min": 195,
+          "departure_time": "2027-10-31 07:15",
+          "arrival_time": "2027-10-31 10:30",
+          "layovers": [],
+          "is_best": true
+        },
+        "best_nonstop": {
+          "price": 440000,
+          "price_per_person": 220000,
+          "airlines": [
+            "Volaris Costa Rica"
+          ],
+          "airline_summary": "Volaris Costa Rica",
+          "stops": 0,
+          "total_duration_min": 195,
+          "departure_time": "2027-10-31 07:15",
+          "arrival_time": "2027-10-31 10:30",
+          "layovers": [],
+          "is_best": true
+        },
+        "top_flights": [
+          {
+            "price": 440000,
+            "price_per_person": 220000,
+            "airlines": [
+              "Volaris Costa Rica"
+            ],
+            "airline_summary": "Volaris Costa Rica",
+            "stops": 0,
+            "total_duration_min": 195,
+            "departure_time": "2027-10-31 07:15",
+            "arrival_time": "2027-10-31 10:30",
+            "layovers": [],
+            "is_best": true
+          },
+          {
+            "price": 468000,
+            "price_per_person": 234000,
+            "airlines": [
+              "Aeroméxico"
+            ],
+            "airline_summary": "Aeroméxico",
+            "stops": 0,
+            "total_duration_min": 200,
+            "departure_time": "2027-10-31 14:10",
+            "arrival_time": "2027-10-31 17:30",
+            "layovers": [],
+            "is_best": true
+          },
+          {
+            "price": 489000,
+            "price_per_person": 244500,
+            "airlines": [
+              "Avianca"
+            ],
+            "airline_summary": "Avianca",
+            "stops": 0,
+            "total_duration_min": 205,
+            "departure_time": "2027-10-31 16:25",
+            "arrival_time": "2027-10-31 19:50",
+            "layovers": [],
+            "is_best": false
+          }
+        ],
+        "price_insights": {
+          "lowest_price": 440000,
+          "price_level": "low",
+          "typical_price_range": [
+            400000,
+            510000
+          ]
+        },
+        "google_flights_url": "https://www.google.com/travel/flights?q=Flights+to+MEX+from+SJO+on+2027-10-31+through+2027-11-08&curr=CRC&hl=es"
+      },
+      "stats": {
+        "samples": 21,
+        "min_overall": 423000,
+        "min_overall_date": "2026-11-01",
+        "max_overall": 457000,
+        "avg_overall": 437905,
+        "min_nonstop": 440000,
+        "min_nonstop_date": "2026-11-21",
+        "previous_overall": 457000,
+        "delta_crc": -17000,
+        "delta_pct": -3.7
+      },
+      "history": [
+        {
+          "date": "2026-11-01",
+          "status": "available",
+          "best_overall_price": 423000,
+          "best_overall_per_person": 211500,
+          "best_overall_airline": "Copa Airlines",
+          "best_overall_stops": 1,
+          "best_nonstop_price": 455000,
+          "best_nonstop_per_person": 227500,
+          "best_nonstop_airline": "Volaris Costa Rica",
+          "price_level": "low"
+        },
+        {
+          "date": "2026-11-02",
+          "status": "available",
+          "best_overall_price": 423000,
+          "best_overall_per_person": 211500,
+          "best_overall_airline": "Copa Airlines",
+          "best_overall_stops": 1,
+          "best_nonstop_price": 455000,
+          "best_nonstop_per_person": 227500,
+          "best_nonstop_airline": "Volaris Costa Rica",
+          "price_level": "low"
+        },
+        {
+          "date": "2026-11-03",
+          "status": "available",
+          "best_overall_price": 426000,
+          "best_overall_per_person": 213000,
+          "best_overall_airline": "Copa Airlines",
+          "best_overall_stops": 1,
+          "best_nonstop_price": 458000,
+          "best_nonstop_per_person": 229000,
+          "best_nonstop_airline": "Aeroméxico",
+          "price_level": "low"
+        },
+        {
+          "date": "2026-11-04",
+          "status": "available",
+          "best_overall_price": 433000,
+          "best_overall_per_person": 216500,
+          "best_overall_airline": "Copa Airlines",
+          "best_overall_stops": 1,
+          "best_nonstop_price": 465000,
+          "best_nonstop_per_person": 232500,
+          "best_nonstop_airline": "Volaris Costa Rica",
+          "price_level": "low"
+        },
+        {
+          "date": "2026-11-05",
+          "status": "available",
+          "best_overall_price": 436000,
+          "best_overall_per_person": 218000,
+          "best_overall_airline": "Copa Airlines",
+          "best_overall_stops": 1,
+          "best_nonstop_price": 468000,
+          "best_nonstop_per_person": 234000,
+          "best_nonstop_airline": "Volaris Costa Rica",
+          "price_level": "low"
+        },
+        {
+          "date": "2026-11-06",
+          "status": "available",
+          "best_overall_price": 447000,
+          "best_overall_per_person": 223500,
+          "best_overall_airline": "Copa Airlines",
+          "best_overall_stops": 1,
+          "best_nonstop_price": 479000,
+          "best_nonstop_per_person": 239500,
+          "best_nonstop_airline": "Aeroméxico",
+          "price_level": "low"
+        },
+        {
+          "date": "2026-11-07",
+          "status": "available",
+          "best_overall_price": 454000,
+          "best_overall_per_person": 227000,
+          "best_overall_airline": "Copa Airlines",
+          "best_overall_stops": 1,
+          "best_nonstop_price": 486000,
+          "best_nonstop_per_person": 243000,
+          "best_nonstop_airline": "Volaris Costa Rica",
+          "price_level": "low"
+        },
+        {
+          "date": "2026-11-08",
+          "status": "available",
+          "best_overall_price": 441000,
+          "best_overall_per_person": 220500,
+          "best_overall_airline": "Copa Airlines",
+          "best_overall_stops": 1,
+          "best_nonstop_price": 473000,
+          "best_nonstop_per_person": 236500,
+          "best_nonstop_airline": "Volaris Costa Rica",
+          "price_level": "low"
+        },
+        {
+          "date": "2026-11-09",
+          "status": "available",
+          "best_overall_price": 432000,
+          "best_overall_per_person": 216000,
+          "best_overall_airline": "Copa Airlines",
+          "best_overall_stops": 1,
+          "best_nonstop_price": 464000,
+          "best_nonstop_per_person": 232000,
+          "best_nonstop_airline": "Aeroméxico",
+          "price_level": "low"
+        },
+        {
+          "date": "2026-11-10",
+          "status": "available",
+          "best_overall_price": 433000,
+          "best_overall_per_person": 216500,
+          "best_overall_airline": "Copa Airlines",
+          "best_overall_stops": 1,
+          "best_nonstop_price": 465000,
+          "best_nonstop_per_person": 232500,
+          "best_nonstop_airline": "Volaris Costa Rica",
+          "price_level": "low"
+        },
+        {
+          "date": "2026-11-11",
+          "status": "available",
+          "best_overall_price": 431000,
+          "best_overall_per_person": 215500,
+          "best_overall_airline": "Copa Airlines",
+          "best_overall_stops": 1,
+          "best_nonstop_price": 463000,
+          "best_nonstop_per_person": 231500,
+          "best_nonstop_airline": "Volaris Costa Rica",
+          "price_level": "low"
+        },
+        {
+          "date": "2026-11-12",
+          "status": "available",
+          "best_overall_price": 426000,
+          "best_overall_per_person": 213000,
+          "best_overall_airline": "Copa Airlines",
+          "best_overall_stops": 1,
+          "best_nonstop_price": 458000,
+          "best_nonstop_per_person": 229000,
+          "best_nonstop_airline": "Aeroméxico",
+          "price_level": "low"
+        },
+        {
+          "date": "2026-11-13",
+          "status": "available",
+          "best_overall_price": 436000,
+          "best_overall_per_person": 218000,
+          "best_overall_airline": "Copa Airlines",
+          "best_overall_stops": 1,
+          "best_nonstop_price": 468000,
+          "best_nonstop_per_person": 234000,
+          "best_nonstop_airline": "Volaris Costa Rica",
+          "price_level": "low"
+        },
+        {
+          "date": "2026-11-14",
+          "status": "available",
+          "best_overall_price": 427000,
+          "best_overall_per_person": 213500,
+          "best_overall_airline": "Copa Airlines",
+          "best_overall_stops": 1,
+          "best_nonstop_price": 459000,
+          "best_nonstop_per_person": 229500,
+          "best_nonstop_airline": "Volaris Costa Rica",
+          "price_level": "low"
+        },
+        {
+          "date": "2026-11-15",
+          "status": "available",
+          "best_overall_price": 440000,
+          "best_overall_per_person": 220000,
+          "best_overall_airline": "Copa Airlines",
+          "best_overall_stops": 1,
+          "best_nonstop_price": 472000,
+          "best_nonstop_per_person": 236000,
+          "best_nonstop_airline": "Aeroméxico",
+          "price_level": "low"
+        },
+        {
+          "date": "2026-11-16",
+          "status": "available",
+          "best_overall_price": 445000,
+          "best_overall_per_person": 222500,
+          "best_overall_airline": "Copa Airlines",
+          "best_overall_stops": 1,
+          "best_nonstop_price": 477000,
+          "best_nonstop_per_person": 238500,
+          "best_nonstop_airline": "Volaris Costa Rica",
+          "price_level": "low"
+        },
+        {
+          "date": "2026-11-17",
+          "status": "available",
+          "best_overall_price": 450000,
+          "best_overall_per_person": 225000,
+          "best_overall_airline": "Copa Airlines",
+          "best_overall_stops": 1,
+          "best_nonstop_price": 482000,
+          "best_nonstop_per_person": 241000,
+          "best_nonstop_airline": "Volaris Costa Rica",
+          "price_level": "low"
+        },
+        {
+          "date": "2026-11-18",
+          "status": "available",
+          "best_overall_price": 445000,
+          "best_overall_per_person": 222500,
+          "best_overall_airline": "Copa Airlines",
+          "best_overall_stops": 1,
+          "best_nonstop_price": 477000,
+          "best_nonstop_per_person": 238500,
+          "best_nonstop_airline": "Aeroméxico",
+          "price_level": "low"
+        },
+        {
+          "date": "2026-11-19",
+          "status": "available",
+          "best_overall_price": 451000,
+          "best_overall_per_person": 225500,
+          "best_overall_airline": "Copa Airlines",
+          "best_overall_stops": 1,
+          "best_nonstop_price": 483000,
+          "best_nonstop_per_person": 241500,
+          "best_nonstop_airline": "Volaris Costa Rica",
+          "price_level": "low"
+        },
+        {
+          "date": "2026-11-20",
+          "status": "available",
+          "best_overall_price": 457000,
+          "best_overall_per_person": 228500,
+          "best_overall_airline": "Copa Airlines",
+          "best_overall_stops": 1,
+          "best_nonstop_price": 489000,
+          "best_nonstop_per_person": 244500,
+          "best_nonstop_airline": "Volaris Costa Rica",
+          "price_level": "low"
+        },
+        {
+          "date": "2026-11-21",
+          "status": "available",
+          "best_overall_price": 440000,
+          "best_overall_per_person": 220000,
+          "best_overall_airline": "Volaris Costa Rica",
+          "best_overall_stops": 0,
+          "best_nonstop_price": 440000,
+          "best_nonstop_per_person": 220000,
+          "best_nonstop_airline": "Aeroméxico",
+          "price_level": "low"
+        }
+      ]
+    }
+  }
+};

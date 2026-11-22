@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vuelos SJO → CDMX · Día de Muertos 2027</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <main class="container">
+    <header class="hero">
+      <div class="hero-top">
+        <span class="route-pill" id="route-pill">SJO → MEX · 2 adultos · Colones (₡)</span>
+        <span class="updated-pill" id="updated-pill">Cargando datos...</span>
+      </div>
+      <h1 id="trip-title">CDMX · Día de Muertos 2027</h1>
+      <p class="subtitle" id="trip-subtitle">
+        Monitoreo automático de tarifas ida y vuelta desde San José (Juan Santamaría) hacia Ciudad de México (Benito Juárez).
+      </p>
+    </header>
+
+    <div id="demo-banner" class="demo-banner hidden" role="status">
+      <span class="demo-dot"></span>
+      <span>
+        <strong>Modo demostración:</strong> estás viendo datos simulados para probar el tablero. Al ejecutar el primer escaneo real con SerpApi, estos datos se reemplazarán automáticamente.
+      </span>
+    </div>
+
+    <!-- KPIs principales -->
+    <section class="kpi-grid" aria-label="Resumen principal">
+      <article class="card kpi-card kpi-highlight">
+        <span class="kpi-label">Mejor tarifa hoy</span>
+        <div class="kpi-value mono" id="kpi-best-price">—</div>
+        <div class="kpi-sub" id="kpi-best-sub">Esperando datos...</div>
+      </article>
+
+      <article class="card kpi-card">
+        <span class="kpi-label">Mejor vuelo directo hoy</span>
+        <div class="kpi-value mono" id="kpi-direct-price">—</div>
+        <div class="kpi-sub" id="kpi-direct-sub">—</div>
+      </article>
+
+      <article class="card kpi-card">
+        <span class="kpi-label">Mínimo histórico</span>
+        <div class="kpi-value mono" id="kpi-min-price">—</div>
+        <div class="kpi-sub" id="kpi-min-sub">—</div>
+      </article>
+
+      <article class="card kpi-card">
+        <span class="kpi-label">Cuenta regresiva</span>
+        <div class="kpi-value mono" id="kpi-countdown">—</div>
+        <div class="kpi-sub" id="kpi-countdown-sub">Día de Muertos · 1–2 nov 2027</div>
+      </article>
+    </section>
+
+    <!-- Comparativa de las 3 ventanas de fechas -->
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <h2>Comparativa de ventanas de fechas</h2>
+          <p class="section-desc">Haz clic en cualquier opción para ver el detalle de vuelos abajo.</p>
+        </div>
+      </div>
+      <div class="windows-grid" id="windows-grid"></div>
+    </section>
+
+    <!-- Gráfica histórica -->
+    <section class="section card chart-section">
+      <div class="chart-header">
+        <div>
+          <h2>Evolución histórica de precios</h2>
+          <p class="section-desc" id="chart-subtitle">Tendencia diaria en colones costarricenses (₡)</p>
+        </div>
+        <div class="chart-controls">
+          <div class="segmented" role="group" aria-label="Base de precio">
+            <button type="button" class="seg-btn active" data-pricing="total">Total (2 adultos)</button>
+            <button type="button" class="seg-btn" data-pricing="per_person">Por persona</button>
+          </div>
+          <div class="segmented" role="group" aria-label="Tipo de vuelo">
+            <button type="button" class="seg-btn active" data-flight-type="overall">Más barato</button>
+            <button type="button" class="seg-btn" data-flight-type="nonstop">Solo directos</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="chart-wrapper">
+        <canvas id="priceChart"></canvas>
+        <div id="chart-empty" class="chart-empty hidden">
+          Aún no hay suficientes días con vuelos publicados para graficar. En cuanto las aerolíneas abran calendario para noviembre 2027, la gráfica se irá llenando automáticamente día a día.
+        </div>
+      </div>
+    </section>
+
+    <!-- Detalle de vuelos encontrados hoy -->
+    <section class="section card table-section">
+      <div class="table-header">
+        <div>
+          <h2>Mejores vuelos encontrados hoy</h2>
+          <p class="section-desc" id="selected-window-desc">Selecciona una opción de fechas</p>
+        </div>
+        <div class="tabs" id="window-tabs" role="tablist"></div>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Aerolínea</th>
+              <th>Escalas</th>
+              <th>Duración</th>
+              <th>Horario salida</th>
+              <th class="num">Por persona</th>
+              <th class="num">Total (2)</th>
+            </tr>
+          </thead>
+          <tbody id="flights-tbody">
+            <tr>
+              <td colspan="6" class="empty-cell">Cargando vuelos...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer class="footer-note">
+      <div class="tip-box">
+        <strong>Tip de fechas CDMX 2027:</strong> El Gran Premio de Fórmula 1 de México está programado del <strong>29 al 31 de octubre de 2027</strong>, justo antes de Día de Muertos (1 y 2 de noviembre). Comparar llegadas antes vs. después de ese fin de semana ayuda a detectar mejores tarifas.
+      </div>
+      <p class="credits">
+        Actualizado automáticamente con GitHub Actions + SerpApi (Google Flights) · Precios referenciales en colones (₡).
+      </p>
+    </footer>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+  <!-- Fallback para abrir docs/index.html localmente con doble clic sin servidor HTTP -->
+  <script src="./data/prices.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
