@@ -16,7 +16,10 @@
     <header class="hero">
       <div class="hero-top">
         <span class="route-pill" id="route-pill">SJO → MEX · 2 adultos · Colones (₡)</span>
-        <span class="updated-pill" id="updated-pill">Cargando datos...</span>
+        <div class="hero-actions">
+          <span class="updated-pill" id="updated-pill">Cargando datos...</span>
+          <button type="button" class="action-pill" id="open-dates-btn">🗓️ Cambiar fechas</button>
+        </div>
       </div>
       <h1 id="trip-title">CDMX · Día de Muertos 2027</h1>
       <p class="subtitle" id="trip-subtitle">
@@ -136,6 +139,120 @@
       </p>
     </footer>
   </main>
+
+  <!-- Modal selector de fechas sin código -->
+  <div id="dates-modal" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="dates-modal-title">
+    <div class="modal-card">
+      <div class="modal-head">
+        <div>
+          <h2 id="dates-modal-title">🗓️ Cambiar fechas del rastreador</h2>
+          <p class="section-desc">Elige las fechas que quieres monitorear sin tocar código. GitHub hará el escaneo real automáticamente.</p>
+        </div>
+        <button type="button" class="icon-close" id="close-dates-btn" aria-label="Cerrar">✕</button>
+      </div>
+
+      <div class="preset-row">
+        <span class="preset-label">Atajos rápidos:</span>
+        <button type="button" class="preset-btn" id="preset-farthest">🔭 Fechas más lejanas hoy</button>
+        <button type="button" class="preset-btn" id="preset-muertos">💀 Día de Muertos 2027</button>
+      </div>
+
+      <form id="dates-form" class="dates-form">
+        <div class="field-group">
+          <label for="input-trip-name">Título del tablero</label>
+          <input type="text" id="input-trip-name" placeholder="Ej. CDMX · Octubre 2027" />
+        </div>
+
+        <div class="date-rows">
+          <div class="date-row">
+            <div class="date-row-head">
+              <span class="color-dot" style="background:#f59e0b"></span>
+              <strong>Opción 1</strong>
+              <span class="nights-pill" id="nights-1">—</span>
+            </div>
+            <div class="date-inputs">
+              <label>
+                <span>Ida</span>
+                <input type="date" id="opt1-out" required />
+              </label>
+              <label>
+                <span>Regreso</span>
+                <input type="date" id="opt1-ret" required />
+              </label>
+            </div>
+          </div>
+
+          <div class="date-row">
+            <div class="date-row-head">
+              <span class="color-dot" style="background:#14b8a6"></span>
+              <strong>Opción 2 <span class="opt-tag">(opcional)</span></strong>
+              <span class="nights-pill" id="nights-2">—</span>
+            </div>
+            <div class="date-inputs">
+              <label>
+                <span>Ida</span>
+                <input type="date" id="opt2-out" />
+              </label>
+              <label>
+                <span>Regreso</span>
+                <input type="date" id="opt2-ret" />
+              </label>
+            </div>
+          </div>
+
+          <div class="date-row">
+            <div class="date-row-head">
+              <span class="color-dot" style="background:#fb7185"></span>
+              <strong>Opción 3 <span class="opt-tag">(opcional)</span></strong>
+              <span class="nights-pill" id="nights-3">—</span>
+            </div>
+            <div class="date-inputs">
+              <label>
+                <span>Ida</span>
+                <input type="date" id="opt3-out" />
+              </label>
+              <label>
+                <span>Regreso</span>
+                <input type="date" id="opt3-ret" />
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <label class="checkbox-row">
+          <input type="checkbox" id="input-notify-tg" checked />
+          <span>Enviar el nuevo reporte a Telegram apenas termine el escaneo</span>
+        </label>
+
+        <details class="token-box" id="token-details">
+          <summary>
+            <span>🔑 Conexión con GitHub para aplicar en 1 clic</span>
+            <span class="token-status" id="token-status">No conectado</span>
+          </summary>
+          <p class="token-help">
+            Pega una sola vez tu token de GitHub (<code>ghp_...</code> con permisos <code>repo</code> y <code>workflow</code>). Se guarda <strong>solo en este dispositivo</strong> (<code>localStorage</code>), nunca en el código público.
+          </p>
+          <div class="token-input-row">
+            <input type="password" id="input-gh-token" placeholder="ghp_..." autocomplete="off" />
+            <button type="button" class="btn-secondary" id="save-token-btn">Guardar</button>
+            <button type="button" class="btn-ghost hidden" id="clear-token-btn">Olvidar</button>
+          </div>
+        </details>
+
+        <div id="dates-feedback" class="dates-feedback hidden" role="status"></div>
+
+        <div class="modal-footer">
+          <a
+            class="btn-secondary"
+            href="https://github.com/mmonge1931/flight-tracker/actions/workflows/update-dates.yml"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Abrir en GitHub ↗</a>
+          <button type="submit" class="btn-primary" id="submit-dates-btn">Aplicar fechas y escanear</button>
+        </div>
+      </form>
+    </div>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
   <!-- Fallback para abrir docs/index.html localmente con doble clic sin servidor HTTP -->

@@ -1,4 +1,4 @@
 fecha_escaneo,opcion_id,opcion,salida,regreso,estado,precio_total_crc,precio_persona_crc,aerolinea_mejor,escalas_mejor,precio_directo_total_crc,aerolinea_directo,nivel_google
-2026-11-23,prueba-dom,Opción 3 · Dom a Lun,2027-02-28,2027-03-08,available,306986,153493,Avianca,0,306986,Avianca,high
-2026-11-23,prueba-mie,Opción 1 · Mié a Jue,2027-02-24,2027-03-04,available,305032,152516,Avianca,0,305032,Avianca,high
-2026-11-23,prueba-vie,Opción 2 · Vie a Sáb,2027-02-26,2027-03-06,available,306986,153493,Avianca,0,306986,Avianca,high
+2026-11-23,w-2027-10-06-2027-10-14,Opción 1 · Mié a Jue,2027-10-06,2027-10-14,available,305248,152624,Avianca,0,305248,Avianca,typical
+2026-11-23,w-2027-10-08-2027-10-16,Opción 2 · Vie a Sáb,2027-10-08,2027-10-16,available,305248,152624,Avianca,0,305248,Avianca,typical
+2026-11-23,w-2027-10-10-2027-10-18,Opción 3 · Dom a Lun,2027-10-10,2027-10-18,available,306986,153493,Avianca,0,306986,Avianca,typical

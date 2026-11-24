@@ -1,6 +1,6 @@
 window.FLIGHT_DATA = {
   "meta": {
-    "trip_name": "CDMX · Datos reales (Prueba Feb–Mar 2027)",
+    "trip_name": "CDMX · Fechas más lejanas (Oct 2027)",
     "origin": "SJO",
     "origin_name": "San José (Juan Santamaría)",
     "destination": "MEX",
@@ -9,163 +9,163 @@ window.FLIGHT_DATA = {
     "currency": "CRC",
     "currency_symbol": "₡",
     "is_demo": false,
-    "last_updated_iso": "2026-11-23T22:50:18.105293-06:00",
-    "last_updated_display": "23/11/2026 22:50 (CR)",
-    "total_scans": 3,
+    "last_updated_iso": "2026-11-23T23:00:33.514960-06:00",
+    "last_updated_display": "23/11/2026 23:00 (CR)",
+    "total_scans": 5,
     "last_weekly_summary_date": "2026-11-23"
   },
   "windows": {
-    "prueba-mie": {
-      "id": "prueba-mie",
+    "w-2027-10-06-2027-10-14": {
+      "id": "w-2027-10-06-2027-10-14",
       "label": "Opción 1 · Mié a Jue",
-      "note": "Mié 24 feb – Jue 4 mar (8 noches). Ventana real de prueba mientras abren los vuelos de Día de Muertos 2027 en diciembre.",
-      "outbound_date": "2027-02-24",
-      "return_date": "2027-03-04",
+      "note": "Mié 6 oct – Jue 14 oct (8 noches). Fechas más lejanas disponibles hoy en Google Flights.",
+      "outbound_date": "2027-10-06",
+      "return_date": "2027-10-14",
       "nights": 8,
       "color": "#f59e0b",
       "status": "available",
-      "status_message": "8 opciones encontradas.",
+      "status_message": "9 opciones encontradas.",
       "latest": {
         "date": "2026-11-23",
-        "timestamp": "2026-11-23T22:50:18.105293-06:00",
+        "timestamp": "2026-11-23T23:00:33.514960-06:00",
         "best_overall": {
-          "price": 305032,
-          "price_per_person": 152516,
+          "price": 305248,
+          "price_per_person": 152624,
           "airlines": [
             "Avianca"
           ],
           "airline_summary": "Avianca",
           "stops": 0,
           "total_duration_min": 180,
-          "departure_time": "2027-02-24 12:25",
-          "arrival_time": "2027-02-24 15:25",
+          "departure_time": "2027-10-06 12:25",
+          "arrival_time": "2027-10-06 15:25",
           "layovers": [],
           "is_best": true
         },
         "best_nonstop": {
-          "price": 305032,
-          "price_per_person": 152516,
+          "price": 305248,
+          "price_per_person": 152624,
           "airlines": [
             "Avianca"
           ],
           "airline_summary": "Avianca",
           "stops": 0,
           "total_duration_min": 180,
-          "departure_time": "2027-02-24 12:25",
-          "arrival_time": "2027-02-24 15:25",
+          "departure_time": "2027-10-06 12:25",
+          "arrival_time": "2027-10-06 15:25",
           "layovers": [],
           "is_best": true
         },
         "top_flights": [
           {
-            "price": 305032,
-            "price_per_person": 152516,
+            "price": 305248,
+            "price_per_person": 152624,
             "airlines": [
               "Avianca"
             ],
             "airline_summary": "Avianca",
             "stops": 0,
             "total_duration_min": 180,
-            "departure_time": "2027-02-24 12:25",
-            "arrival_time": "2027-02-24 15:25",
+            "departure_time": "2027-10-06 12:25",
+            "arrival_time": "2027-10-06 15:25",
             "layovers": [],
             "is_best": true
           },
           {
-            "price": 305032,
-            "price_per_person": 152516,
-            "airlines": [
-              "Avianca"
-            ],
-            "airline_summary": "Avianca",
-            "stops": 1,
-            "total_duration_min": 595,
-            "departure_time": "2027-02-24 17:15",
-            "arrival_time": "2027-02-25 03:10",
-            "layovers": [
-              "Aeropuerto Internacional El Dorado"
-            ],
-            "is_best": false
-          },
-          {
-            "price": 305032,
-            "price_per_person": 152516,
-            "airlines": [
-              "Avianca"
-            ],
-            "airline_summary": "Avianca",
-            "stops": 1,
-            "total_duration_min": 615,
-            "departure_time": "2027-02-24 16:05",
-            "arrival_time": "2027-02-25 02:20",
-            "layovers": [
-              "Aeropuerto Internacional José María Córdova"
-            ],
-            "is_best": false
-          },
-          {
-            "price": 305032,
-            "price_per_person": 152516,
+            "price": 305248,
+            "price_per_person": 152624,
             "airlines": [
               "Avianca"
             ],
             "airline_summary": "Avianca",
             "stops": 1,
             "total_duration_min": 620,
-            "departure_time": "2027-02-24 01:55",
-            "arrival_time": "2027-02-24 12:15",
+            "departure_time": "2027-10-06 01:50",
+            "arrival_time": "2027-10-06 12:10",
             "layovers": [
               "Aeropuerto Internacional El Dorado"
             ],
             "is_best": false
           },
           {
-            "price": 305666,
-            "price_per_person": 152833,
+            "price": 305248,
+            "price_per_person": 152624,
+            "airlines": [
+              "Avianca"
+            ],
+            "airline_summary": "Avianca",
+            "stops": 1,
+            "total_duration_min": 665,
+            "departure_time": "2027-10-06 16:00",
+            "arrival_time": "2027-10-07 03:05",
+            "layovers": [
+              "Aeropuerto Internacional El Dorado"
+            ],
+            "is_best": false
+          },
+          {
+            "price": 305248,
+            "price_per_person": 152624,
+            "airlines": [
+              "Avianca"
+            ],
+            "airline_summary": "Avianca",
+            "stops": 1,
+            "total_duration_min": 720,
+            "departure_time": "2027-10-06 14:00",
+            "arrival_time": "2027-10-07 02:00",
+            "layovers": [
+              "Aeropuerto Internacional José María Córdova"
+            ],
+            "is_best": false
+          },
+          {
+            "price": 305880,
+            "price_per_person": 152940,
             "airlines": [
               "Aeromexico"
             ],
             "airline_summary": "Aeromexico",
             "stops": 0,
-            "total_duration_min": 193,
-            "departure_time": "2027-02-24 07:02",
-            "arrival_time": "2027-02-24 10:15",
+            "total_duration_min": 190,
+            "departure_time": "2027-10-06 07:30",
+            "arrival_time": "2027-10-06 10:40",
             "layovers": [],
             "is_best": true
           },
           {
-            "price": 305666,
-            "price_per_person": 152833,
+            "price": 305880,
+            "price_per_person": 152940,
             "airlines": [
               "Aeromexico"
             ],
             "airline_summary": "Aeromexico",
             "stops": 0,
-            "total_duration_min": 199,
-            "departure_time": "2027-02-24 13:21",
-            "arrival_time": "2027-02-24 16:40",
+            "total_duration_min": 195,
+            "departure_time": "2027-10-06 13:20",
+            "arrival_time": "2027-10-06 16:35",
             "layovers": [],
             "is_best": true
           }
         ],
         "price_insights": {
-          "lowest_price": 305032,
-          "price_level": "high",
+          "lowest_price": 305248,
+          "price_level": "typical",
           "typical_price_range": [
-            250000,
-            290000
+            275000,
+            610000
           ],
           "price_history": []
         },
-        "google_flights_url": "https://www.google.com/travel/flights?hl=es&gl=cr&curr=CRC&tfs=CBwQAhoeEgoyMDI3LTAyLTI0agcIARIDU0pPcgcIARIDTUVYGh4SCjIwMjctMDMtMDRqBwgBEgNNRVhyBwgBEgNTSk9AAUABSAFwAZgBAQ&tfu=EgIIAQ"
+        "google_flights_url": "https://www.google.com/travel/flights?hl=es&gl=cr&curr=CRC&tfs=CBwQAhoeEgoyMDI3LTEwLTA2agcIARIDU0pPcgcIARIDTUVYGh4SCjIwMjctMTAtMTRqBwgBEgNNRVhyBwgBEgNTSk9AAUABSAFwAZgBAQ&tfu=EgIIAQ"
       },
       "stats": {
         "samples": 1,
-        "min_overall": 305032,
+        "min_overall": 305248,
         "min_overall_date": "2026-11-23",
-        "max_overall": 305032,
-        "avg_overall": 305032,
-        "min_nonstop": 305032,
+        "max_overall": 305248,
+        "avg_overall": 305248,
+        "min_nonstop": 305248,
         "min_nonstop_date": "2026-11-23",
         "previous_overall": null,
         "delta_crc": null,
@@ -175,172 +175,172 @@ window.FLIGHT_DATA = {
         {
           "date": "2026-11-23",
           "status": "available",
-          "best_overall_price": 305032,
-          "best_overall_per_person": 152516,
+          "best_overall_price": 305248,
+          "best_overall_per_person": 152624,
           "best_overall_airline": "Avianca",
           "best_overall_stops": 0,
-          "best_nonstop_price": 305032,
-          "best_nonstop_per_person": 152516,
+          "best_nonstop_price": 305248,
+          "best_nonstop_per_person": 152624,
           "best_nonstop_airline": "Avianca",
-          "price_level": "high"
+          "price_level": "typical"
         }
       ]
     },
-    "prueba-vie": {
-      "id": "prueba-vie",
+    "w-2027-10-08-2027-10-16": {
+      "id": "w-2027-10-08-2027-10-16",
       "label": "Opción 2 · Vie a Sáb",
-      "note": "Vie 26 feb – Sáb 6 mar (8 noches). Mismo formato de 2 fines de semana, con tarifas reales de Google Flights.",
-      "outbound_date": "2027-02-26",
-      "return_date": "2027-03-06",
+      "note": "Vie 8 oct – Sáb 16 oct (8 noches). Fechas más lejanas disponibles hoy en Google Flights.",
+      "outbound_date": "2027-10-08",
+      "return_date": "2027-10-16",
       "nights": 8,
       "color": "#14b8a6",
       "status": "available",
-      "status_message": "8 opciones encontradas.",
+      "status_message": "10 opciones encontradas.",
       "latest": {
         "date": "2026-11-23",
-        "timestamp": "2026-11-23T22:50:18.105293-06:00",
+        "timestamp": "2026-11-23T23:00:33.514960-06:00",
         "best_overall": {
-          "price": 306986,
-          "price_per_person": 153493,
+          "price": 305248,
+          "price_per_person": 152624,
           "airlines": [
             "Avianca"
           ],
           "airline_summary": "Avianca",
           "stops": 0,
           "total_duration_min": 180,
-          "departure_time": "2027-02-26 12:25",
-          "arrival_time": "2027-02-26 15:25",
+          "departure_time": "2027-10-08 12:25",
+          "arrival_time": "2027-10-08 15:25",
           "layovers": [],
           "is_best": true
         },
         "best_nonstop": {
-          "price": 306986,
-          "price_per_person": 153493,
+          "price": 305248,
+          "price_per_person": 152624,
           "airlines": [
             "Avianca"
           ],
           "airline_summary": "Avianca",
           "stops": 0,
           "total_duration_min": 180,
-          "departure_time": "2027-02-26 12:25",
-          "arrival_time": "2027-02-26 15:25",
+          "departure_time": "2027-10-08 12:25",
+          "arrival_time": "2027-10-08 15:25",
           "layovers": [],
           "is_best": true
         },
         "top_flights": [
           {
-            "price": 306986,
-            "price_per_person": 153493,
+            "price": 305248,
+            "price_per_person": 152624,
             "airlines": [
               "Avianca"
             ],
             "airline_summary": "Avianca",
             "stops": 0,
             "total_duration_min": 180,
-            "departure_time": "2027-02-26 12:25",
-            "arrival_time": "2027-02-26 15:25",
+            "departure_time": "2027-10-08 12:25",
+            "arrival_time": "2027-10-08 15:25",
             "layovers": [],
             "is_best": true
           },
           {
-            "price": 306986,
-            "price_per_person": 153493,
+            "price": 305248,
+            "price_per_person": 152624,
             "airlines": [
               "Avianca"
             ],
             "airline_summary": "Avianca",
             "stops": 1,
-            "total_duration_min": 595,
-            "departure_time": "2027-02-26 17:15",
-            "arrival_time": "2027-02-27 03:10",
+            "total_duration_min": 630,
+            "departure_time": "2027-10-08 01:40",
+            "arrival_time": "2027-10-08 12:10",
             "layovers": [
               "Aeropuerto Internacional El Dorado"
             ],
             "is_best": false
           },
           {
-            "price": 306986,
-            "price_per_person": 153493,
+            "price": 305248,
+            "price_per_person": 152624,
             "airlines": [
               "Avianca"
             ],
             "airline_summary": "Avianca",
             "stops": 1,
-            "total_duration_min": 615,
-            "departure_time": "2027-02-26 16:05",
-            "arrival_time": "2027-02-27 02:20",
+            "total_duration_min": 665,
+            "departure_time": "2027-10-08 16:00",
+            "arrival_time": "2027-10-09 03:05",
+            "layovers": [
+              "Aeropuerto Internacional El Dorado"
+            ],
+            "is_best": false
+          },
+          {
+            "price": 305248,
+            "price_per_person": 152624,
+            "airlines": [
+              "Avianca"
+            ],
+            "airline_summary": "Avianca",
+            "stops": 1,
+            "total_duration_min": 720,
+            "departure_time": "2027-10-08 14:00",
+            "arrival_time": "2027-10-09 02:00",
             "layovers": [
               "Aeropuerto Internacional José María Córdova"
             ],
             "is_best": false
           },
           {
-            "price": 306986,
-            "price_per_person": 153493,
-            "airlines": [
-              "Avianca"
-            ],
-            "airline_summary": "Avianca",
-            "stops": 1,
-            "total_duration_min": 620,
-            "departure_time": "2027-02-26 01:55",
-            "arrival_time": "2027-02-26 12:15",
-            "layovers": [
-              "Aeropuerto Internacional El Dorado"
-            ],
-            "is_best": false
-          },
-          {
-            "price": 308333,
-            "price_per_person": 154166,
+            "price": 306588,
+            "price_per_person": 153294,
             "airlines": [
               "Avianca"
             ],
             "airline_summary": "Avianca",
             "stops": 1,
             "total_duration_min": 350,
-            "departure_time": "2027-02-26 05:10",
-            "arrival_time": "2027-02-26 11:00",
+            "departure_time": "2027-10-08 05:05",
+            "arrival_time": "2027-10-08 10:55",
             "layovers": [
               "Aeropuerto Internacional de El Salvador San Óscar Arnulfo Romero y Galdámez"
             ],
             "is_best": true
           },
           {
-            "price": 313003,
-            "price_per_person": 156502,
+            "price": 315518,
+            "price_per_person": 157759,
             "airlines": [
-              "COPA"
+              "Avianca"
             ],
-            "airline_summary": "COPA",
+            "airline_summary": "Avianca",
             "stops": 1,
-            "total_duration_min": 748,
-            "departure_time": "2027-02-26 09:57",
-            "arrival_time": "2027-02-26 22:25",
+            "total_duration_min": 910,
+            "departure_time": "2027-10-08 19:45",
+            "arrival_time": "2027-10-09 10:55",
             "layovers": [
-              "Aeropuerto Internacional de Tocumen"
+              "Aeropuerto Internacional de El Salvador San Óscar Arnulfo Romero y Galdámez"
             ],
             "is_best": false
           }
         ],
         "price_insights": {
-          "lowest_price": 306986,
-          "price_level": "high",
+          "lowest_price": 305248,
+          "price_level": "typical",
           "typical_price_range": [
-            260000,
-            300000
+            250000,
+            540000
           ],
           "price_history": []
         },
-        "google_flights_url": "https://www.google.com/travel/flights?hl=es&gl=cr&curr=CRC&tfs=CBwQAhoeEgoyMDI3LTAyLTI2agcIARIDU0pPcgcIARIDTUVYGh4SCjIwMjctMDMtMDZqBwgBEgNNRVhyBwgBEgNTSk9AAUABSAFwAZgBAQ&tfu=EgIIAQ"
+        "google_flights_url": "https://www.google.com/travel/flights?hl=es&gl=cr&curr=CRC&tfs=CBwQAhoeEgoyMDI3LTEwLTA4agcIARIDU0pPcgcIARIDTUVYGh4SCjIwMjctMTAtMTZqBwgBEgNNRVhyBwgBEgNTSk9AAUABSAFwAZgBAQ&tfu=EgIIAQ"
       },
       "stats": {
         "samples": 1,
-        "min_overall": 306986,
+        "min_overall": 305248,
         "min_overall_date": "2026-11-23",
-        "max_overall": 306986,
-        "avg_overall": 306986,
-        "min_nonstop": 306986,
+        "max_overall": 305248,
+        "avg_overall": 305248,
+        "min_nonstop": 305248,
         "min_nonstop_date": "2026-11-23",
         "previous_overall": null,
         "delta_crc": null,
@@ -350,30 +350,30 @@ window.FLIGHT_DATA = {
         {
           "date": "2026-11-23",
           "status": "available",
-          "best_overall_price": 306986,
-          "best_overall_per_person": 153493,
+          "best_overall_price": 305248,
+          "best_overall_per_person": 152624,
           "best_overall_airline": "Avianca",
           "best_overall_stops": 0,
-          "best_nonstop_price": 306986,
-          "best_nonstop_per_person": 153493,
+          "best_nonstop_price": 305248,
+          "best_nonstop_per_person": 152624,
           "best_nonstop_airline": "Avianca",
-          "price_level": "high"
+          "price_level": "typical"
         }
       ]
     },
-    "prueba-dom": {
-      "id": "prueba-dom",
+    "w-2027-10-10-2027-10-18": {
+      "id": "w-2027-10-10-2027-10-18",
       "label": "Opción 3 · Dom a Lun",
-      "note": "Dom 28 feb – Lun 8 mar (8 noches). Salida en domingo y regreso en lunes, con tarifas reales de Google Flights.",
-      "outbound_date": "2027-02-28",
-      "return_date": "2027-03-08",
+      "note": "Dom 10 oct – Lun 18 oct (8 noches). Fechas más lejanas disponibles hoy en Google Flights.",
+      "outbound_date": "2027-10-10",
+      "return_date": "2027-10-18",
       "nights": 8,
       "color": "#fb7185",
       "status": "available",
       "status_message": "9 opciones encontradas.",
       "latest": {
         "date": "2026-11-23",
-        "timestamp": "2026-11-23T22:50:18.105293-06:00",
+        "timestamp": "2026-11-23T23:00:33.514960-06:00",
         "best_overall": {
           "price": 306986,
           "price_per_person": 153493,
@@ -383,8 +383,8 @@ window.FLIGHT_DATA = {
           "airline_summary": "Avianca",
           "stops": 0,
           "total_duration_min": 180,
-          "departure_time": "2027-02-28 12:25",
-          "arrival_time": "2027-02-28 15:25",
+          "departure_time": "2027-10-10 12:25",
+          "arrival_time": "2027-10-10 15:25",
           "layovers": [],
           "is_best": true
         },
@@ -397,8 +397,8 @@ window.FLIGHT_DATA = {
           "airline_summary": "Avianca",
           "stops": 0,
           "total_duration_min": 180,
-          "departure_time": "2027-02-28 12:25",
-          "arrival_time": "2027-02-28 15:25",
+          "departure_time": "2027-10-10 12:25",
+          "arrival_time": "2027-10-10 15:25",
           "layovers": [],
           "is_best": true
         },
@@ -412,8 +412,8 @@ window.FLIGHT_DATA = {
             "airline_summary": "Avianca",
             "stops": 0,
             "total_duration_min": 180,
-            "departure_time": "2027-02-28 12:25",
-            "arrival_time": "2027-02-28 15:25",
+            "departure_time": "2027-10-10 12:25",
+            "arrival_time": "2027-10-10 15:25",
             "layovers": [],
             "is_best": true
           },
@@ -425,11 +425,27 @@ window.FLIGHT_DATA = {
             ],
             "airline_summary": "Avianca",
             "stops": 1,
-            "total_duration_min": 620,
-            "departure_time": "2027-02-28 01:55",
-            "arrival_time": "2027-02-28 12:15",
+            "total_duration_min": 630,
+            "departure_time": "2027-10-10 01:40",
+            "arrival_time": "2027-10-10 12:10",
             "layovers": [
               "Aeropuerto Internacional El Dorado"
+            ],
+            "is_best": false
+          },
+          {
+            "price": 306986,
+            "price_per_person": 153493,
+            "airlines": [
+              "Avianca"
+            ],
+            "airline_summary": "Avianca",
+            "stops": 1,
+            "total_duration_min": 720,
+            "departure_time": "2027-10-10 14:00",
+            "arrival_time": "2027-10-11 02:00",
+            "layovers": [
+              "Aeropuerto Internacional José María Córdova"
             ],
             "is_best": false
           },
@@ -442,8 +458,8 @@ window.FLIGHT_DATA = {
             "airline_summary": "Avianca",
             "stops": 1,
             "total_duration_min": 350,
-            "departure_time": "2027-02-28 05:10",
-            "arrival_time": "2027-02-28 11:00",
+            "departure_time": "2027-10-10 05:05",
+            "arrival_time": "2027-10-10 10:55",
             "layovers": [
               "Aeropuerto Internacional de El Salvador San Óscar Arnulfo Romero y Galdámez"
             ],
@@ -457,53 +473,41 @@ window.FLIGHT_DATA = {
             ],
             "airline_summary": "COPA",
             "stops": 1,
-            "total_duration_min": 748,
-            "departure_time": "2027-02-28 09:57",
-            "arrival_time": "2027-02-28 22:25",
+            "total_duration_min": 375,
+            "departure_time": "2027-10-10 19:15",
+            "arrival_time": "2027-10-11 01:30",
             "layovers": [
               "Aeropuerto Internacional de Tocumen"
             ],
+            "is_best": true
+          },
+          {
+            "price": 321265,
+            "price_per_person": 160632,
+            "airlines": [
+              "Avianca"
+            ],
+            "airline_summary": "Avianca",
+            "stops": 1,
+            "total_duration_min": 665,
+            "departure_time": "2027-10-10 16:00",
+            "arrival_time": "2027-10-11 03:05",
+            "layovers": [
+              "Aeropuerto Internacional El Dorado"
+            ],
             "is_best": false
-          },
-          {
-            "price": 325575,
-            "price_per_person": 162788,
-            "airlines": [
-              "Aeromexico"
-            ],
-            "airline_summary": "Aeromexico",
-            "stops": 0,
-            "total_duration_min": 193,
-            "departure_time": "2027-02-28 07:02",
-            "arrival_time": "2027-02-28 10:15",
-            "layovers": [],
-            "is_best": true
-          },
-          {
-            "price": 343535,
-            "price_per_person": 171768,
-            "airlines": [
-              "Aeromexico"
-            ],
-            "airline_summary": "Aeromexico",
-            "stops": 0,
-            "total_duration_min": 199,
-            "departure_time": "2027-02-28 13:21",
-            "arrival_time": "2027-02-28 16:40",
-            "layovers": [],
-            "is_best": true
           }
         ],
         "price_insights": {
           "lowest_price": 306986,
-          "price_level": "high",
+          "price_level": "typical",
           "typical_price_range": [
-            260000,
-            300000
+            250000,
+            540000
           ],
           "price_history": []
         },
-        "google_flights_url": "https://www.google.com/travel/flights?hl=es&gl=cr&curr=CRC&tfs=CBwQAhoeEgoyMDI3LTAyLTI4agcIARIDU0pPcgcIARIDTUVYGh4SCjIwMjctMDMtMDhqBwgBEgNNRVhyBwgBEgNTSk9AAUABSAFwAZgBAQ&tfu=EgIIAQ"
+        "google_flights_url": "https://www.google.com/travel/flights?hl=es&gl=cr&curr=CRC&tfs=CBwQAhoeEgoyMDI3LTEwLTEwagcIARIDU0pPcgcIARIDTUVYGh4SCjIwMjctMTAtMThqBwgBEgNNRVhyBwgBEgNTSk9AAUABSAFwAZgBAQ&tfu=EgIIAQ"
       },
       "stats": {
         "samples": 1,
@@ -528,7 +532,7 @@ window.FLIGHT_DATA = {
           "best_nonstop_price": 306986,
           "best_nonstop_per_person": 153493,
           "best_nonstop_airline": "Avianca",
-          "price_level": "high"
+          "price_level": "typical"
         }
       ]
     }

@@ -1117,6 +1117,131 @@ def run_scan(config: Dict[str, Any], force_notify: bool, dry_run: bool) -> int:
     return 0
 
 
+ES_WEEKDAYS = ["Lun", "Mar", "Mié", "Jue", "Vie", "Sáb", "Dom"]
+ES_MONTHS = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"]
+WINDOW_COLORS = ["#f59e0b", "#14b8a6", "#fb7185"]
+
+
+def format_es_day_month(d: date) -> str:
+    return f"{ES_WEEKDAYS[d.weekday()]} {d.day} {ES_MONTHS[d.month - 1]}"
+
+
+def build_window_entry(
+    idx: int,
+    out_str: str,
+    ret_str: str,
+    label: Optional[str] = None,
+    note: Optional[str] = None,
+    win_id: Optional[str] = None,
+) -> Dict[str, Any]:
+    out_d = parse_iso_date(out_str)
+    ret_d = parse_iso_date(ret_str)
+    if ret_d <= out_d:
+        raise ValueError(f"La fecha de regreso ({ret_str}) debe ser posterior a la ida ({out_str}).")
+    nights = (ret_d - out_d).days
+    auto_label = f"Opción {idx + 1} · {ES_WEEKDAYS[out_d.weekday()]} a {ES_WEEKDAYS[ret_d.weekday()]}"
+    auto_note = f"{format_es_day_month(out_d)} – {format_es_day_month(ret_d)} ({nights} noches)."
+    return {
+        "id": win_id or f"w-{out_str}-{ret_str}",
+        "label": label or auto_label,
+        "note": note or auto_note,
+        "outbound_date": out_str,
+        "return_date": ret_str,
+        "color": WINDOW_COLORS[idx % len(WINDOW_COLORS)],
+    }
+
+
+def apply_date_update(config: Dict[str, Any], args: argparse.Namespace) -> Dict[str, Any]:
+    preset = (args.preset or "personalizado").strip().lower()
+    today_date = now_cr().date()
+
+    if preset == "dia-de-muertos-2027":
+        backup_path = BASE_DIR / "config.dia-de-muertos-2027.json"
+        if backup_path.exists():
+            backup_cfg = json.loads(backup_path.read_text(encoding="utf-8"))
+            config["trip_name"] = args.trip_name or backup_cfg.get("trip_name", "CDMX · Día de Muertos 2027")
+            config["date_windows"] = backup_cfg["date_windows"]
+        else:
+            config["trip_name"] = args.trip_name or "CDMX · Día de Muertos 2027"
+            config["date_windows"] = [
+                build_window_entry(
+                    0,
+                    "2027-10-27",
+                    "2027-11-04",
+                    label="Opción 1 · Antes de F1",
+                    note="Mié 27 oct – Jue 4 nov (8 noches). Llegas antes del pico de vuelos de F1 y vives todo Día de Muertos.",
+                    win_id="antes-f1",
+                ),
+                build_window_entry(
+                    1,
+                    "2027-10-29",
+                    "2027-11-06",
+                    label="Opción 2 · Clásica (2 fines)",
+                    note="Vie 29 oct – Sáb 6 nov (8 noches). Aprovecha dos fines de semana; coincide con el finde de F1.",
+                    win_id="clasica-fines",
+                ),
+                build_window_entry(
+                    2,
+                    "2027-10-31",
+                    "2027-11-08",
+                    label="Opción 3 · Esquivando F1",
+                    note="Dom 31 oct – Lun 8 nov (8 noches). Esquiva el pico de llegadas de F1; cubre 1 y 2 nov + ofrendas.",
+                    win_id="post-f1",
+                ),
+            ]
+    elif preset == "mas-lejanas":
+        max_ret = today_date + timedelta(days=329)
+        nights = 8
+        offsets = [4, 2, 0]
+        windows: List[Dict[str, Any]] = []
+        for idx, back_days in enumerate(offsets):
+            ret_d = max_ret - timedelta(days=back_days)
+            out_d = ret_d - timedelta(days=nights)
+            windows.append(
+                build_window_entry(
+                    idx,
+                    out_d.isoformat(),
+                    ret_d.isoformat(),
+                    note=(
+                        f"{format_es_day_month(out_d)} – {format_es_day_month(ret_d)} ({nights} noches). "
+                        f"Fechas más lejanas disponibles hoy en Google Flights."
+                    ),
+                )
+            )
+        month_name = ES_MONTHS[max_ret.month - 1].capitalize()
+        config["trip_name"] = args.trip_name or f"CDMX · Fechas más lejanas ({month_name} {max_ret.year})"
+        config["date_windows"] = windows
+    else:
+        raw_pairs = [
+            (args.opt1_out, args.opt1_ret),
+            (args.opt2_out, args.opt2_ret),
+            (args.opt3_out, args.opt3_ret),
+        ]
+        windows = []
+        for idx, (o_val, r_val) in enumerate(raw_pairs):
+            o_str = (o_val or "").strip()
+            r_str = (r_val or "").strip()
+            if not o_str and not r_str:
+                continue
+            if not o_str or not r_str:
+                raise ValueError(f"Opción {idx + 1} incompleta: indica tanto ida como regreso.")
+            windows.append(build_window_entry(idx, o_str, r_str))
+        if not windows:
+            raise ValueError("Debes indicar al menos una opción con fecha de ida y regreso.")
+        if args.trip_name and args.trip_name.strip():
+            config["trip_name"] = args.trip_name.strip()
+        else:
+            first_d = parse_iso_date(windows[0]["outbound_date"])
+            config["trip_name"] = f"CDMX · {ES_MONTHS[first_d.month - 1].capitalize()} {first_d.year}"
+        config["date_windows"] = windows
+
+    CONFIG_PATH.write_text(json.dumps(config, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(f"🗓️ Configuración actualizada ({preset}) en config.json: {config['trip_name']}")
+    for w in config["date_windows"]:
+        print(f"   • {w['label']}: {w['outbound_date']} → {w['return_date']}")
+    return config
+
+
 def main() -> int:
     load_dotenv(BASE_DIR / ".env")
     parser = argparse.ArgumentParser(
@@ -1152,9 +1277,42 @@ def main() -> int:
         action="store_true",
         help="Envía un mensaje corto de prueba para confirmar que tu bot de Telegram funciona.",
     )
+    parser.add_argument(
+        "--update-dates",
+        action="store_true",
+        help="Actualiza las ventanas de fechas en config.json y ejecuta un escaneo inmediato.",
+    )
+    parser.add_argument(
+        "--preset",
+        default="personalizado",
+        choices=["personalizado", "dia-de-muertos-2027", "mas-lejanas"],
+        help="Modo de actualización de fechas cuando se usa --update-dates.",
+    )
+    parser.add_argument("--trip-name", default="", help="Título personalizado del tablero.")
+    parser.add_argument("--opt1-out", default="", help="Opción 1: fecha de ida (YYYY-MM-DD).")
+    parser.add_argument("--opt1-ret", default="", help="Opción 1: fecha de regreso (YYYY-MM-DD).")
+    parser.add_argument("--opt2-out", default="", help="Opción 2: fecha de ida (YYYY-MM-DD).")
+    parser.add_argument("--opt2-ret", default="", help="Opción 2: fecha de regreso (YYYY-MM-DD).")
+    parser.add_argument("--opt3-out", default="", help="Opción 3: fecha de ida (YYYY-MM-DD).")
+    parser.add_argument("--opt3-ret", default="", help="Opción 3: fecha de regreso (YYYY-MM-DD).")
+    parser.add_argument(
+        "--no-scan",
+        action="store_true",
+        help="Con --update-dates, guarda config.json sin ejecutar escaneo todavía.",
+    )
 
     args = parser.parse_args()
     config = load_config()
+
+    if args.update_dates:
+        try:
+            config = apply_date_update(config, args)
+        except ValueError as exc:
+            print(f"❌ Error en las fechas: {exc}", file=sys.stderr)
+            return 1
+        if args.no_scan:
+            return 0
+        return run_scan(config, force_notify=args.force_notify, dry_run=args.dry_run)
 
     if args.get_chat_id:
         return cmd_get_chat_id()

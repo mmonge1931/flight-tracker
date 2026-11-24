@@ -1,5 +1,5 @@
 {
-  "trip_name": "CDMX · Datos reales (Prueba Feb–Mar 2027)",
+  "trip_name": "CDMX · Fechas más lejanas (Oct 2027)",
   "origin": "SJO",
   "origin_name": "San José (Juan Santamaría)",
   "destination": "MEX",
@@ -12,27 +12,27 @@
   "dashboard_url": "https://mmonge1931.github.io/flight-tracker/",
   "date_windows": [
     {
-      "id": "prueba-mie",
+      "id": "w-2027-10-06-2027-10-14",
       "label": "Opción 1 · Mié a Jue",
-      "note": "Mié 24 feb – Jue 4 mar (8 noches). Ventana real de prueba mientras abren los vuelos de Día de Muertos 2027 en diciembre.",
-      "outbound_date": "2027-02-24",
-      "return_date": "2027-03-04",
+      "note": "Mié 6 oct – Jue 14 oct (8 noches). Fechas más lejanas disponibles hoy en Google Flights.",
+      "outbound_date": "2027-10-06",
+      "return_date": "2027-10-14",
       "color": "#f59e0b"
     },
     {
-      "id": "prueba-vie",
+      "id": "w-2027-10-08-2027-10-16",
       "label": "Opción 2 · Vie a Sáb",
-      "note": "Vie 26 feb – Sáb 6 mar (8 noches). Mismo formato de 2 fines de semana, con tarifas reales de Google Flights.",
-      "outbound_date": "2027-02-26",
-      "return_date": "2027-03-06",
+      "note": "Vie 8 oct – Sáb 16 oct (8 noches). Fechas más lejanas disponibles hoy en Google Flights.",
+      "outbound_date": "2027-10-08",
+      "return_date": "2027-10-16",
       "color": "#14b8a6"
     },
     {
-      "id": "prueba-dom",
+      "id": "w-2027-10-10-2027-10-18",
       "label": "Opción 3 · Dom a Lun",
-      "note": "Dom 28 feb – Lun 8 mar (8 noches). Salida en domingo y regreso en lunes, con tarifas reales de Google Flights.",
-      "outbound_date": "2027-02-28",
-      "return_date": "2027-03-08",
+      "note": "Dom 10 oct – Lun 18 oct (8 noches). Fechas más lejanas disponibles hoy en Google Flights.",
+      "outbound_date": "2027-10-10",
+      "return_date": "2027-10-18",
       "color": "#fb7185"
     }
   ],

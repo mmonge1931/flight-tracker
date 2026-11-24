@@ -1,0 +1,112 @@
+name: 🗓️ Cambiar fechas del rastreador
+
+on:
+  workflow_dispatch:
+    inputs:
+      preset:
+        description: "Modo de fechas"
+        type: choice
+        required: true
+        default: "personalizado"
+        options:
+          - personalizado
+          - dia-de-muertos-2027
+          - mas-lejanas
+      trip_name:
+        description: "Título del tablero (opcional)"
+        type: string
+        required: false
+        default: ""
+      opt1_out:
+        description: "Opción 1 · Ida (AAAA-MM-DD, solo en modo personalizado)"
+        type: string
+        required: false
+        default: ""
+      opt1_ret:
+        description: "Opción 1 · Regreso (AAAA-MM-DD)"
+        type: string
+        required: false
+        default: ""
+      opt2_out:
+        description: "Opción 2 · Ida (AAAA-MM-DD, opcional)"
+        type: string
+        required: false
+        default: ""
+      opt2_ret:
+        description: "Opción 2 · Regreso (AAAA-MM-DD, opcional)"
+        type: string
+        required: false
+        default: ""
+      opt3_out:
+        description: "Opción 3 · Ida (AAAA-MM-DD, opcional)"
+        type: string
+        required: false
+        default: ""
+      opt3_ret:
+        description: "Opción 3 · Regreso (AAAA-MM-DD, opcional)"
+        type: string
+        required: false
+        default: ""
+      notify_telegram:
+        description: "Enviar nuevo reporte a Telegram al terminar"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+jobs:
+  update-dates:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Actualizar fechas y escanear vuelos
+        env:
+          SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          INPUT_PRESET: ${{ inputs.preset }}
+          INPUT_TRIP_NAME: ${{ inputs.trip_name }}
+          INPUT_OPT1_OUT: ${{ inputs.opt1_out }}
+          INPUT_OPT1_RET: ${{ inputs.opt1_ret }}
+          INPUT_OPT2_OUT: ${{ inputs.opt2_out }}
+          INPUT_OPT2_RET: ${{ inputs.opt2_ret }}
+          INPUT_OPT3_OUT: ${{ inputs.opt3_out }}
+          INPUT_OPT3_RET: ${{ inputs.opt3_ret }}
+          INPUT_NOTIFY: ${{ inputs.notify_telegram }}
+        run: |
+          ARGS=(
+            "--update-dates"
+            "--preset" "$INPUT_PRESET"
+            "--trip-name" "$INPUT_TRIP_NAME"
+            "--opt1-out" "$INPUT_OPT1_OUT"
+            "--opt1-ret" "$INPUT_OPT1_RET"
+            "--opt2-out" "$INPUT_OPT2_OUT"
+            "--opt2-ret" "$INPUT_OPT2_RET"
+            "--opt3-out" "$INPUT_OPT3_OUT"
+            "--opt3-ret" "$INPUT_OPT3_RET"
+          )
+          if [ "$INPUT_NOTIFY" = "true" ]; then
+            ARGS+=("--force-notify")
+          fi
+          python3 tracker.py "${ARGS[@]}"
+
+      - name: Publicar nuevas fechas y precios en el tablero
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add config.json data/ docs/data/
+          if git diff --staged --quiet; then
+            echo "No hubo cambios nuevos."
+          else
+            git commit -m "chore: actualizar fechas del rastreador ($(date -u +'%Y-%m-%d'))"
+            git push
+          fi
