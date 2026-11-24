@@ -1,9 +1,9 @@
 name: Escaneo diario de vuelos SJO → CDMX
 
 on:
-  schedule:
-    # 14:00 UTC = 8:00 AM hora de Costa Rica (UTC-6)
-    - cron: "0 14 * * *"
+  # PAUSADO TEMPORALMENTE: cuando volvamos en diciembre, quitamos el "#" de las 2 líneas siguientes
+  # schedule:
+  #   - cron: "0 14 * * *"  # 14:00 UTC = 8:00 AM hora de Costa Rica (UTC-6)
   workflow_dispatch:
     inputs:
       force_notify:
