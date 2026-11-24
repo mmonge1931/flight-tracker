@@ -203,6 +203,11 @@
               ? `<div>⚡ Directo: <strong>${formatMoney(nonstop.price, symbol)}</strong> (${escapeHtml(nonstop.airline_summary)})</div>`
               : "";
 
+          const typicalLine =
+            Array.isArray(insights.typical_price_range) && insights.typical_price_range.length === 2
+              ? `<div>📊 Rango típico Google: ${formatMoney(insights.typical_price_range[0], symbol)} – ${formatMoney(insights.typical_price_range[1], symbol)}</div>`
+              : "";
+
           bodyHtml = `
             <div class="win-price-row">
               <span class="win-price mono">${formatMoney(best.price, symbol)}</span>
@@ -212,6 +217,7 @@
             <div class="win-meta">
               <div>${escapeHtml(best.airline_summary)} · <strong>${formatStops(best.stops)}</strong> · ${formatDuration(best.total_duration_min)}</div>
               ${directLine}
+              ${typicalLine}
             </div>
           `;
         } else {
@@ -291,6 +297,91 @@
     emptyEl.classList.add("hidden");
     canvas.classList.remove("hidden");
 
+    const modeDesc =
+      state.pricingMode === "per_person"
+        ? `Precio estimado por persona (${state.flightType === "nonstop" ? "solo vuelos directos" : "mejor tarifa general"})`
+        : `Precio total para ${adults} adultos (${state.flightType === "nonstop" ? "solo vuelos directos" : "mejor tarifa general"})`;
+
+    if (state.chart) {
+      state.chart.destroy();
+    }
+
+    // Día 1 de datos reales: mostrar gráfica de barras comparativa entre ventanas
+    if (labels.length === 1) {
+      const onlyDate = labels[0];
+      document.getElementById("chart-subtitle").textContent =
+        `Comparativa real de hoy (${formatShortDate(onlyDate)}) · ${modeDesc} · A partir de mañana verás la curva histórica día a día`;
+
+      const barLabels = windows.map((w) => w.label);
+      const barValues = windows.map((w) => {
+        const entry = (w.history || []).find((h) => h.date === onlyDate && h.status === "available");
+        if (!entry) return null;
+        const rawPrice =
+          state.flightType === "nonstop" ? entry.best_nonstop_price : entry.best_overall_price;
+        if (!rawPrice) return null;
+        return state.pricingMode === "per_person" ? Math.round(rawPrice / adults) : rawPrice;
+      });
+      const barColors = windows.map((w) => w.color || "#f59e0b");
+      const validBarVals = barValues.filter((v) => v !== null && v !== undefined);
+      const minBar = validBarVals.length ? Math.min(...validBarVals) : 0;
+      const maxBar = validBarVals.length ? Math.max(...validBarVals) : 0;
+      const suggestedMin = minBar > 0 ? Math.floor((minBar * 0.82) / 10000) * 10000 : 0;
+      const suggestedMax = maxBar > 0 ? Math.ceil((maxBar * 1.06) / 10000) * 10000 : undefined;
+
+      state.chart = new Chart(canvas, {
+        type: "bar",
+        data: {
+          labels: barLabels,
+          datasets: [
+            {
+              label: state.flightType === "nonstop" ? "Mejor vuelo directo hoy" : "Mejor tarifa hoy",
+              data: barValues,
+              backgroundColor: barColors.map((c) => `${c}cc`),
+              borderColor: barColors,
+              borderWidth: 2,
+              borderRadius: 10,
+              maxBarThickness: 72,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              backgroundColor: "#111827",
+              titleColor: "#f9fafb",
+              bodyColor: "#e5e7eb",
+              borderColor: "rgba(255,255,255,0.12)",
+              borderWidth: 1,
+              padding: 12,
+              callbacks: {
+                label: (ctx) => `${ctx.dataset.label}: ${formatMoney(ctx.parsed.y, symbol)}`,
+              },
+            },
+          },
+          scales: {
+            x: {
+              grid: { display: false },
+              ticks: { color: "#d1d5db", font: { family: "Plus Jakarta Sans", size: 12 } },
+            },
+            y: {
+              beginAtZero: false,
+              suggestedMin,
+              suggestedMax,
+              grid: { color: "rgba(255,255,255,0.06)" },
+              ticks: {
+                color: "#9ca3af",
+                callback: (v) => formatMoney(v, symbol),
+              },
+            },
+          },
+        },
+      });
+      return;
+    }
+
     const datasets = windows.map((w) => {
       const byDate = new Map((w.history || []).map((h) => [h.date, h]));
       const values = labels.map((d) => {
@@ -316,15 +407,7 @@
       };
     });
 
-    const subtitle =
-      state.pricingMode === "per_person"
-        ? `Precio estimado por persona (${state.flightType === "nonstop" ? "solo vuelos directos" : "mejor tarifa general"})`
-        : `Precio total para ${adults} adultos (${state.flightType === "nonstop" ? "solo vuelos directos" : "mejor tarifa general"})`;
-    document.getElementById("chart-subtitle").textContent = subtitle;
-
-    if (state.chart) {
-      state.chart.destroy();
-    }
+    document.getElementById("chart-subtitle").textContent = modeDesc;
 
     state.chart = new Chart(canvas, {
       type: "line",

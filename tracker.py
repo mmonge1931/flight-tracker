@@ -311,10 +311,23 @@ def fetch_google_flights(
     if not (isinstance(typical_range, list) and len(typical_range) == 2):
         typical_range = None
 
+    raw_history = raw_insights.get("price_history") or []
+    clean_history: List[List[Any]] = []
+    for pair in raw_history:
+        if (
+            isinstance(pair, list)
+            and len(pair) >= 2
+            and isinstance(pair[0], (int, float))
+            and isinstance(pair[1], (int, float))
+            and pair[1] > 0
+        ):
+            clean_history.append([int(pair[0]), int(round(pair[1]))])
+
     price_insights = {
         "lowest_price": raw_insights.get("lowest_price") or best_overall["price"],
         "price_level": raw_insights.get("price_level"),
         "typical_price_range": typical_range,
+        "price_history": clean_history,
     }
 
     return {
@@ -977,6 +990,40 @@ def run_scan(config: Dict[str, Any], force_notify: bool, dry_run: bool) -> int:
         best_nonstop = result.get("best_nonstop") or {}
         insights = result.get("price_insights") or {}
 
+        # Si Google Flights trae historial real (price_history), rellenar días previos faltantes
+        merged_history = list(prev_history)
+        gf_price_history = insights.get("price_history") or []
+        if result["status"] == "available" and gf_price_history and best_overall.get("price"):
+            existing_dates = {h.get("date") for h in merged_history}
+            last_gf_price = gf_price_history[-1][1]
+            scale = 1
+            if adults > 1 and last_gf_price > 0:
+                ratio = best_overall["price"] / last_gf_price
+                if adults * 0.75 <= ratio <= adults * 1.35:
+                    scale = adults
+            gf_by_date: Dict[str, int] = {}
+            for ts, p_val in gf_price_history:
+                d_str = datetime.fromtimestamp(ts, tz=CR_TZ).date().isoformat()
+                if d_str < today_str and d_str not in existing_dates:
+                    gf_by_date[d_str] = int(round(p_val * scale))
+            for d_str in sorted(gf_by_date):
+                total_p = gf_by_date[d_str]
+                merged_history.append(
+                    {
+                        "date": d_str,
+                        "status": "available",
+                        "best_overall_price": total_p,
+                        "best_overall_per_person": int(round(total_p / max(1, adults))),
+                        "best_overall_airline": None,
+                        "best_overall_stops": None,
+                        "best_nonstop_price": None,
+                        "best_nonstop_per_person": None,
+                        "best_nonstop_airline": None,
+                        "price_level": None,
+                        "source": "google_flights",
+                    }
+                )
+
         history_entry = {
             "date": today_str,
             "status": result["status"],
@@ -990,7 +1037,7 @@ def run_scan(config: Dict[str, Any], force_notify: bool, dry_run: bool) -> int:
             "price_level": insights.get("price_level"),
         }
 
-        updated_history = upsert_history_entry(prev_history, history_entry)
+        updated_history = upsert_history_entry(merged_history, history_entry)
         stats = compute_window_stats(updated_history)
 
         new_windows[win_id] = {

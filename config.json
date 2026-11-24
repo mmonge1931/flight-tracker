@@ -1,5 +1,5 @@
 {
-  "trip_name": "CDMX · Día de Muertos 2027",
+  "trip_name": "CDMX · Datos reales (Prueba Feb–Mar 2027)",
   "origin": "SJO",
   "origin_name": "San José (Juan Santamaría)",
   "destination": "MEX",
@@ -12,27 +12,27 @@
   "dashboard_url": "https://mmonge1931.github.io/flight-tracker/",
   "date_windows": [
     {
-      "id": "antes-f1",
-      "label": "Opción 1 · Antes de F1",
-      "note": "Mié 27 oct – Jue 4 nov (8 noches). Llegas antes del pico de vuelos de F1 y vives todo Día de Muertos.",
-      "outbound_date": "2027-10-27",
-      "return_date": "2027-11-04",
+      "id": "prueba-mie",
+      "label": "Opción 1 · Mié a Jue",
+      "note": "Mié 24 feb – Jue 4 mar (8 noches). Ventana real de prueba mientras abren los vuelos de Día de Muertos 2027 en diciembre.",
+      "outbound_date": "2027-02-24",
+      "return_date": "2027-03-04",
       "color": "#f59e0b"
     },
     {
-      "id": "clasica-fines",
-      "label": "Opción 2 · Clásica (2 fines)",
-      "note": "Vie 29 oct – Sáb 6 nov (8 noches). Aprovecha dos fines de semana; coincide con el finde de F1.",
-      "outbound_date": "2027-10-29",
-      "return_date": "2027-11-06",
+      "id": "prueba-vie",
+      "label": "Opción 2 · Vie a Sáb",
+      "note": "Vie 26 feb – Sáb 6 mar (8 noches). Mismo formato de 2 fines de semana, con tarifas reales de Google Flights.",
+      "outbound_date": "2027-02-26",
+      "return_date": "2027-03-06",
       "color": "#14b8a6"
     },
     {
-      "id": "post-f1",
-      "label": "Opción 3 · Esquivando F1",
-      "note": "Dom 31 oct – Lun 8 nov (8 noches). Esquiva el pico de llegadas de F1; cubre 1 y 2 nov + ofrendas.",
-      "outbound_date": "2027-10-31",
-      "return_date": "2027-11-08",
+      "id": "prueba-dom",
+      "label": "Opción 3 · Dom a Lun",
+      "note": "Dom 28 feb – Lun 8 mar (8 noches). Salida en domingo y regreso en lunes, con tarifas reales de Google Flights.",
+      "outbound_date": "2027-02-28",
+      "return_date": "2027-03-08",
       "color": "#fb7185"
     }
   ],
