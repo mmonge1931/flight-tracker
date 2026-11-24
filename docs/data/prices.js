@@ -9,9 +9,9 @@ window.FLIGHT_DATA = {
     "currency": "CRC",
     "currency_symbol": "₡",
     "is_demo": false,
-    "last_updated_iso": "2026-11-23T23:00:33.514960-06:00",
-    "last_updated_display": "23/11/2026 23:00 (CR)",
-    "total_scans": 5,
+    "last_updated_iso": "2026-11-23T23:03:43.986738-06:00",
+    "last_updated_display": "23/11/2026 23:03 (CR)",
+    "total_scans": 6,
     "last_weekly_summary_date": "2026-11-23"
   },
   "windows": {
@@ -27,7 +27,7 @@ window.FLIGHT_DATA = {
       "status_message": "9 opciones encontradas.",
       "latest": {
         "date": "2026-11-23",
-        "timestamp": "2026-11-23T23:00:33.514960-06:00",
+        "timestamp": "2026-11-23T23:03:43.986738-06:00",
         "best_overall": {
           "price": 305248,
           "price_per_person": 152624,
@@ -198,7 +198,7 @@ window.FLIGHT_DATA = {
       "status_message": "10 opciones encontradas.",
       "latest": {
         "date": "2026-11-23",
-        "timestamp": "2026-11-23T23:00:33.514960-06:00",
+        "timestamp": "2026-11-23T23:03:43.986738-06:00",
         "best_overall": {
           "price": 305248,
           "price_per_person": 152624,
@@ -373,7 +373,7 @@ window.FLIGHT_DATA = {
       "status_message": "9 opciones encontradas.",
       "latest": {
         "date": "2026-11-23",
-        "timestamp": "2026-11-23T23:00:33.514960-06:00",
+        "timestamp": "2026-11-23T23:03:43.986738-06:00",
         "best_overall": {
           "price": 306986,
           "price_per_person": 153493,
